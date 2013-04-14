@@ -1,14 +1,13 @@
 {
-    "name": "bootstrap"
-  , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
-  , "version": "3.0.0"
-  , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://twitter.github.com/bootstrap/"
-  , "author": "Twitter Inc."
-  , "scripts": { "test": "make test" }
+    "name": "bootstrap-square-ui"
+  , "description": "Bootstrap 3.0 mashup with designmodo.com's Square UI theme."
+  , "version": "0.0.1"
+  , "keywords": ["bootstrap", "css", "designmodo", "square", "ui"]
+  , "homepage": "http://deltaepsilon.github.io/"
+  , "author": "Christopher Esplin"
   , "repository": {
       "type": "git"
-    , "url": "https://github.com/twitter/bootstrap.git"
+    , "url": "git@github.com:deltaepsilon/bootstrap-square-ui.git"
   }
   , "licenses": [
     {
@@ -17,9 +16,11 @@
     }
   ]
   , "devDependencies": {
-      "uglify-js": "1.3.4"
-    , "jshint": "0.9.1"
-    , "recess": "1.1.6"
-    , "connect": "2.1.3"
+     "jshint": "0.9.1"
+    , "grunt": ">=0.4.1"
+    , "grunt-contrib-less": "*"
+    , "grunt-contrib-concat": "*"
+    , "grunt-contrib-uglify": "*"
+    , "grunt-contrib-watch": "*"
   }
 }
