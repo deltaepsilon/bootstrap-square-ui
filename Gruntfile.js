@@ -6,26 +6,30 @@ module.exports = function(grunt) {
 //                    paths: ['less']
                 },
                 files: {
-                    'dist/css/bootstrap.css': 'less/bootstrap.less'
+                    'dist/css/bootstrap.css': 'less/bootstrap.less',
+                    'dist/css/square-ui.css': 'dist/less/square-ui.less'
                 }
             }
         },
         concat: {
             js: {
-                src: ['js/*.js'],
-                dest: 'dist/js/bootstrap-square-ui.js'
+                src: [
+                    'js/bootstrap-tooltip.js',
+                    'js/*.js'
+                ],
+                dest: 'dist/js/bootstrap.js'
             }
         },
         uglify: {
             js: {
                 files: {
-                    'dist/js/bootstrap-square-ui.min.js': ['dist/js/bootstrap-square-ui.js']
+                    'dist/js/bootstrap.min.js': ['dist/js/bootstrap.js']
                 }
             }
         },
         watch: {
             less: {
-                files: 'less/.less',
+                files: ['less/*.less', 'dist/less/*.less'],
                 tasks: ['less']
             },
             js: {
