@@ -5,58 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css"/>
     <link rel="stylesheet" href="/css/square-ui.css"/>
+    <link rel="stylesheet" href="/css/rainbow/zenburnesque.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/rainbow/rainbow.min.js"></script>
 </head>
 <body>
 
 <span class="col-span-12 square-ui-header">
-    <div class="square-ui-hexagon"><h4 class="big">square ui</h4></div>
+    <div class="square-ui-hexagon"></div>
     <h4 class="big">nice user interface for your site</h4>
     <hr class="white mini"/>
     <h1 class="big">elements</h1>
 </span>
 
 <span class="col-span-12">
-    <span class="col-span-6">
+
         <div class="panel">
+
             <div class="panel-heading">
                 <span class="panel-heading-primary">edit box</span>
                 <span class="panel-heading-secondary">01</span>
             </div>
             <div class="panel-primary">
-                <input type="text" value="Normal"/>
+                <span class="col-span-6">
+                    <input type="text" value="Normal"/>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<input type="text" value="Normal"/>
+                    </pre>
+                </span>
 
-                <input class="input-big" type="text" value="Big Text"/>
+                <span class="col-span-6">
+<input class="input-large" type="text" value="Big Text"/>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<input class="input-large" type="text" value="Big Text"/>
+                    </pre>
+                </span>
 
-                <div class="input-search-wrapper">
-                    <input class="input-search" type="text" value="Search"/>
-                    <input class="input-search-submit" type="submit"/>
-                </div>
-
-                <input class="input-small" type="text" value="Small"/>
-
-
-
-                <span class="col-span-3">
-                    <div class="input-search-wrapper-small">
-                        <input class="input-search" type="text" value="Search Small"/>
+                <span class="col-span-6">
+                    <div class="input-search-wrapper">
+                        <input class="input-search" type="search" value="Search"/>
                         <input class="input-search-submit" type="submit"/>
                     </div>
                 </span>
-
-                <span class="col-span-3">
-                    <input class="input-small" type="text" value="Small"/>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<div class="input-search-wrapper">
+    <input class="input-search" type="search" value="Search"/>
+    <input class="input-search-submit" type="submit"/>
+</div>
+                    </pre>
                 </span>
 
-                <input type="number" value="1"/>
+                <span class="col-span-6">
+                    <input class="input-small" type="text" value="Small"/>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<input class="input-small" type="text" value="Small"/>
+                    </pre>
+                </span>
 
-                <input type="integer" value="1"/>
+                <span class="col-span-6">
+                    <div class="input-search-wrapper">
+                        <input class="input-search input-small" type="text" value="Search Small"/>
+                        <input class="input-search-submit input-small" type="submit"/>
+                    </div>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<div class="input-search-wrapper">
+    <input class="input-search input-small" type="text" value="Search Small"/>
+    <input class="input-search-submit input-small" type="submit"/>
+</div>
+                    </pre>
+                </span>
+
+                <span class="col-span-6">
+                    <input type="number" value="1"/>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<input type="number" value="1"/>
+                    </pre>
+                </span>
+
             </div>
         </div>
     </span>
 
-    <span class="col-span-6">
+
+
+    <span class="col-span-12">
         <div class="panel">
             <div class="panel-heading">
                 <span class="panel-heading-primary">combo box</span>

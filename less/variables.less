@@ -11,6 +11,14 @@
 @brownLight: #e3ddd1;
 @brownDark: #ded7cd;
 @green: #227c5b;
+@gray0: #f4f4f4;
+@gray1: #d7d2cc;
+@gray2: #dcd8cd;
+@gray3: #232323;
+
+
+@white: #fff;
+@black: #000;
 
 //
 
@@ -71,9 +79,9 @@
 @padding-small:           2px 10px;  // 26px
 @padding-mini:            0 6px;   // 22px
 
-@border-radius-base:      4px;
-@border-radius-large:     6px;
-@border-radius-small:     3px;
+@border-radius-base:      0px;
+@border-radius-large:     0px;
+@border-radius-small:     0px;
 
 @component-active-bg:            @brand-primary;
 
@@ -91,7 +99,7 @@
 // Buttons
 // -------------------------
 
-@btn-color:                      #fff;
+@btn-color:                      @white;
 @btn-bg:                         #a7a9aa;
 @btn-border:                     @btn-bg;
 
@@ -115,10 +123,10 @@
 // Forms
 // -------------------------
 
-@input-bg:                       #fff;
+@input-bg:                       @white;
 @input-bg-disabled:              @grayLighter;
 
-@input-border:                   #ccc;
+@input-border:                   @white;
 @input-border-radius:            @border-radius-base;
 
 @input-color-placeholder:        @grayLight;
@@ -133,16 +141,16 @@
 // Dropdowns
 // -------------------------
 
-@dropdown-bg:                    #fff;
+@dropdown-bg:                    @white;
 @dropdown-border:                rgba(0,0,0,.15);
 @dropdown-divider-top:           #e5e5e5;
-@dropdown-divider-bottom:        #fff;
+@dropdown-divider-bottom:        @white;
 
 @dropdown-link-color:            @grayDark;
-@dropdown-link-hover-color:      #fff;
+@dropdown-link-hover-color:      @white;
 @dropdown-link-hover-bg:         @dropdown-link-active-bg;
 
-@dropdown-link-active-color:     #fff;
+@dropdown-link-active-color:     @white;
 @dropdown-link-active-bg:        @component-active-bg;
 
 
@@ -197,12 +205,12 @@
 
 // Inverted navbar brand label
 @navbar-inverse-brand-color:                @navbar-inverse-link-color;
-@navbar-inverse-brand-color-hover:          #fff;
+@navbar-inverse-brand-color-hover:          @white;
 @navbar-inverse-brand-bg-hover:             transparent;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @grayLight;
-@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-color:           @white;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
@@ -212,7 +220,7 @@
 // Inverted navbar search
 // Normal navbar needs no special styles or vars
 @navbar-inverse-search-bg:                  lighten(@navbar-inverse-bg, 25%);
-@navbar-inverse-search-bg-focus:            #fff;
+@navbar-inverse-search-bg-focus:            @white;
 @navbar-inverse-search-border:              @navbar-inverse-bg;
 @navbar-inverse-search-placeholder-color:   #ccc;
 
@@ -220,7 +228,7 @@
 // Pagination
 // -------------------------
 
-@pagination-bg:                        #fff;
+@pagination-bg:                        @white;
 @pagination-border:                    #ddd;
 @pagination-active-bg:                 #f5f5f5;
 
@@ -255,14 +263,14 @@
 
 // Tooltips and popovers
 // -------------------------
-@tooltip-color:               #fff;
+@tooltip-color:               @white;
 @tooltip-bg:                  rgba(0,0,0,.9);
 @tooltip-arrow-width:         5px;
 @tooltip-arrow-color:         @tooltip-bg;
 
-@popover-bg:                  #fff;
+@popover-bg:                  @white;
 @popover-arrow-width:         10px;
-@popover-arrow-color:         #fff;
+@popover-arrow-color:         @white;
 @popover-title-bg:            darken(@popover-bg, 3%);
 
 // Special enhancement for popovers
@@ -295,23 +303,22 @@
 
 // List group
 // -------------------------
-@list-group-bg:               #fff;
+@list-group-bg:               @white;
 @list-group-border:           #ddd;
 @list-group-border-radius:    @border-radius-base;
 
 @list-group-hover-bg:         #f5f5f5;
-@list-group-active-text:      #fff;
+@list-group-active-text:      @white;
 @list-group-active-bg:        @component-active-bg;
 @list-group-active-border:    @list-group-active-bg;
 
 // Panels
 // -------------------------
-@panel-bg:                    #fff;
-@panel-border:                #ddd;
-@panel-border-radius:         @border-radius-base;
-@panel-heading-bg:            #f5f5f5;
+@panel-bg:                    transparent;
+@panel-border:                @gray1;
+@panel-heading-bg:            transparent;
 
-@panel-primary-text:          #fff;
+@panel-primary-text:          @white;
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 

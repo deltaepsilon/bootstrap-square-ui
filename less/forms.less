@@ -56,18 +56,40 @@ input[type="tel"],
 input[type="color"] {
   display: inline-block;
   min-height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: 6px 9px;
+  padding: 16px;
+  margin-bottom: 20px;
   // margin-bottom: (@line-height-base / 2);
   font-size: @font-size-base;
   line-height: @line-height-base;
-  color: @gray;
+  color: @gray3;
   vertical-align: middle;
   background-color: @input-bg;
-  border: 1px solid @input-border;
+  border: 4px solid @input-border;
   border-radius: @input-border-radius;
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-  .transition(~"border linear .2s, box-shadow linear .2s");
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: @gray2;
+  }
+
+  // Focus state
+  &:focus {
+    background-color: transparent;
+    border-color: @green;
+    color: @green;
+    outline: none;
+  }
+
+  &.input-large {
+    padding: 13px;
+    font-size: 22px;
+  }
+  &.input-small {
+    padding: 7px;
+  }
 }
+
+
 
 // Reset appearance properties for textual inputs and textarea
 // Can't be on input[type=*] selectors or it's too specific
@@ -91,32 +113,6 @@ input[type="checkbox"] {
 // Reset height since textareas have rows
 textarea {
   height: auto;
-}
-
-// Everything else
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  // Focus state
-  &:focus {
-    border-color: rgba(82,168,236,.8);
-    outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
-    //.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
-    .box-shadow(0 0 8px rgba(82,168,236,.6));
-  }
 }
 
 // Position radios and checkboxes better
@@ -210,40 +206,78 @@ textarea {
   margin-left: 10px; // space out consecutive inline controls
 }
 
+// Search Boxes
+// ------------
+.input-search-wrapper {
+  position: relative;
+  margin-bottom: 20px;
 
+  .input-search {
+    margin-bottom: 0;
+    padding-right: 60px;
 
-// INPUT SIZES
-// -----------
+    &:hover {
+      border-color: @white;
+    }
 
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  &.input-large {
-    padding: @padding-large;
-    font-size: @font-size-large;
-    border-radius: @border-radius-large;
+    &:focus {
+      background-color: @white;
+      border-color: @white;
+      color: @gray3;
+    }
+
+    &.input-small {
+      padding-right: 45px;
+    }
   }
-  &.input-small {
-    min-height: @input-height-small;
-    padding: @padding-small;
-    font-size: @font-size-small;
-    border-radius: @border-radius-small;
+
+  .input-search-submit {
+    .loupe-dark-large;
+    background-position: -133px 2px;
+    border-color: @gray0;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    background-color: @white;
+    font-size: 0;
+    height: inherit;
+    width: 60px;
+    .absLayout(0, 0, 0, inherit);
+
+
+    &:hover {
+      background-color: @green;
+      background-position: -56px 2px;
+    }
+
+    &.input-small {
+      width: 43px;
+
+      background-position: -135px -44px;
+
+      &:hover {
+        background-position: -58px -45px;
+      }
+    }
   }
 }
 
+// Number Inputs
+// ----------------------
+input[type="number"] {
+  background-color: @black;
+  border-color: @black;
+  color: @white;
+
+  &:hover {
+    border-color: @black;
+  }
+
+  &:focus {
+    background-color: @black;
+    border-color: @green;
+    color: @white;
+  }
+}
 
 
 // GRID SIZING FOR INPUTS
