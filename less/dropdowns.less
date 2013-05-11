@@ -8,6 +8,38 @@
 .dropdown {
   position: relative;
 }
+
+.dropdown-toggle {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #232323;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+
+  &:before {
+    .before;
+    .absLayout(0, 0, 0, inherit);
+    .three-black-bars;
+    border-color: @gray0;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    width: 60px;
+
+
+  }
+
+  &:hover:before {
+    .three-white-bars;
+    background-color: @green;
+  }
+}
+
 .dropdown-toggle:active,
 .open .dropdown-toggle {
   outline: 0;
@@ -35,22 +67,38 @@
 // The dropdown menu (ul)
 // ----------------------
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: @zindex-dropdown;
+  background-color: @green;
+  color: @white;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  left: 0;
   list-style: none;
-  background-color: @dropdown-bg;
-  border: 1px solid #ccc; // IE8 fallback
-  border: 1px solid @dropdown-border;
-  border-radius: @border-radius-base;
-  .box-shadow(0 6px 12px rgba(0,0,0,.175));
-  .background-clip(padding-box);
+  margin: 0; // override default ul
+  min-width: 160px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: @zindex-dropdown;
+
+  li {
+    border-bottom: 1px solid @green1;
+    padding: 20px;
+
+
+    &:last-of-type {
+      border-width: 0;
+    }
+  }
+
+  .dropdown-image {
+    width: 66px;
+    height: 60px;
+    float: left;
+    position: relative;
+    top: -20px;
+    left: -20px;
+  }
 
   // Aligns the dropdown menu to right
   &.pull-right {

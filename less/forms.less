@@ -38,7 +38,6 @@ label {
 // -------------------------
 
 // Shared size and type resets
-select,
 textarea,
 input[type="text"],
 input[type="password"],
@@ -137,7 +136,6 @@ select[size] {
 }
 
 // Focus for select, file, radio, and checkbox
-select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -276,6 +274,36 @@ input[type="number"] {
     background-color: @black;
     border-color: @green;
     color: @white;
+  }
+}
+
+// Selects
+// ----------------------
+select {
+  background-color: #ffffff;
+  background-image: url('../img/select-arrows.png');
+  background-repeat: no-repeat;
+  background-position: 103% -8px;
+  background-size: 75px 75px;
+
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #232323;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  min-height: 62px;
+  line-height: 20px;
+  padding: 16px;
+  position: relative;
+  margin-bottom: 20px;
+  vertical-align: middle;
+
+  .appearance(none);
+
+  &:focus {
+    outline: none;
   }
 }
 

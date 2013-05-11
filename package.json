@@ -22,5 +22,7 @@
     , "grunt-contrib-concat": "*"
     , "grunt-contrib-uglify": "*"
     , "grunt-contrib-watch": "*"
+    , "grunt-contrib-livereload": "*"
+    , "grunt-contrib-connect": "*"
   }
 }

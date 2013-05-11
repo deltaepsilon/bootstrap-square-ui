@@ -21,6 +21,8 @@
 
 <span class="col-span-12">
 
+    <!--Edit Box-->
+
         <div class="panel">
 
             <div class="panel-heading">
@@ -100,6 +102,7 @@
 
 
 
+    <!--Combo Box-->
     <span class="col-span-12">
         <div class="panel">
             <div class="panel-heading">
@@ -107,11 +110,55 @@
                 <span class="panel-heading-secondary">02</span>
             </div>
             <div class="panel-primary">
+                <!--Classic Select-->
+                <span class="col-span-6">
+                    <select>
+                        <option value="classic" selected>Classic</option>
+                        <option value="classically" selected>Classically</option>
+                        <option value="classicalest" selected>Classicalest</option>
+                    </select>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<select>
+    <option value="classic" selected>Classic</option>
+    <option value="classically" selected>Classically</option>
+    <option value="classicalest" selected>Classicalest</option>
+</select>
+                    </pre>
+                </span>
 
+
+
+
+                <!--Bootstrap DropDown-->
+                <span class="col-span-6">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+                            <li><div class="dropdown-image eye-transparent"></div>Send Message</li>
+                            <li><div class="dropdown-image person-transparent"></div>Settings</li>
+                            <li><div class="dropdown-image beaker-transparent"></div>Favorite</li>
+                        </ul>
+                    </div>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<div class="dropdown">
+    <div class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+        <li class="eye-transparent">Send Message</li>
+        <li class="person-transparent">Settings</li>
+        <li class="beaker-transparent">Favorite</li>
+    </ul>
+</div>
+                    </pre>
+                </span>
             </div>
         </div>
     </span>
 </span>
 
 </body>
+    <!--<script src="http://localhost:9001/livereload.js?snipver=1"></script>-->
 </html>

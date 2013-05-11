@@ -1173,7 +1173,6 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-select,
 textarea,
 input[type="text"],
 input[type="password"],
@@ -1202,7 +1201,6 @@ input[type="color"] {
   border-radius: 0px;
   box-sizing: border-box;
 }
-select:hover,
 textarea:hover,
 input[type="text"]:hover,
 input[type="password"]:hover,
@@ -1220,7 +1218,6 @@ input[type="tel"]:hover,
 input[type="color"]:hover {
   border-color: #dcd8cd;
 }
-select:focus,
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1241,7 +1238,6 @@ input[type="color"]:focus {
   color: #227c5b;
   outline: none;
 }
-select.input-large,
 textarea.input-large,
 input[type="text"].input-large,
 input[type="password"].input-large,
@@ -1260,7 +1256,6 @@ input[type="color"].input-large {
   padding: 13px;
   font-size: 22px;
 }
-select.input-small,
 textarea.input-small,
 input[type="text"].input-small,
 input[type="password"].input-small,
@@ -1314,7 +1309,6 @@ select[multiple],
 select[size] {
   height: auto;
 }
-select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -1442,6 +1436,34 @@ input[type="number"]:focus {
   background-color: #000000;
   border-color: #227c5b;
   color: #ffffff;
+}
+select {
+  background-color: #ffffff;
+  background-image: url('../img/select-arrows.png');
+  background-repeat: no-repeat;
+  background-position: 103% -8px;
+  background-size: 75px 75px;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #232323;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  min-height: 62px;
+  line-height: 20px;
+  padding: 16px;
+  position: relative;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+}
+select:focus {
+  outline: none;
 }
 input[class*="span"],
 select[class*="span"],
@@ -2549,6 +2571,41 @@ fieldset[disabled] .btn-link:focus {
 .dropdown {
   position: relative;
 }
+.dropdown-toggle {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #232323;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+.dropdown-toggle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: inherit;
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: 1px -46px;
+  border-color: #f4f4f4;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  width: 60px;
+}
+.dropdown-toggle:hover:before {
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: 1px -92px;
+  background-color: #227c5b;
+}
 .dropdown-toggle:active,
 .open .dropdown-toggle {
   outline: 0;
@@ -2568,25 +2625,34 @@ fieldset[disabled] .btn-link:focus {
   margin-left: 2px;
 }
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
+  background-color: #227c5b;
+  color: #ffffff;
   display: none;
   float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
+  left: 0;
   list-style: none;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
+  margin: 0;
+  min-width: 160px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1000;
+}
+.dropdown-menu li {
+  border-bottom: 1px solid #2d8464;
+  padding: 20px;
+}
+.dropdown-menu li:last-of-type {
+  border-width: 0;
+}
+.dropdown-menu .dropdown-image {
+  width: 66px;
+  height: 60px;
+  float: left;
+  position: relative;
+  top: -20px;
+  left: -20px;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -4901,38 +4967,24 @@ a.list-group-item.active > .badge,
 }
 .triangles-up-down {
   background-position: -18px -5px;
-  width: 10px;
-  height: 14px;
 }
 .three-black-bars {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: 1px -46px;
 }
 .three-white-bars {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: 1px -92px;
 }
 .three-broken-bars {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .eye-transparent {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: 1px -186px;
 }
 .person-transparent {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: 1px -243px;
 }
 .beaker-transparent {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: 1px -303px;
 }
 .heart-red {
   background-position: 0px 0px;
