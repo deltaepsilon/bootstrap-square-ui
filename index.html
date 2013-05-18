@@ -112,53 +112,155 @@
             <div class="panel-primary">
                 <!--Classic Select-->
                 <span class="col-span-6">
-                    <select>
-                        <option value="classic" selected>Classic</option>
-                        <option value="classically" selected>Classically</option>
-                        <option value="classicalest" selected>Classicalest</option>
-                    </select>
+                    <span class="select-wrapper">
+                        <select>
+                            <option value="classic" selected>Classic</option>
+                            <option value="classically" selected>Classically</option>
+                            <option value="classicalest" selected>Classicalest</option>
+                        </select>
+                    </span>
                 </span>
                 <span class="col-span-6">
                     <pre data-language="html">
-<select>
-    <option value="classic" selected>Classic</option>
-    <option value="classically" selected>Classically</option>
-    <option value="classicalest" selected>Classicalest</option>
-</select>
+<span class="select-wrapper">
+    <select>
+        <option value="classic" selected>Classic</option>
+        <option value="classically" selected>Classically</option>
+        <option value="classicalest" selected>Classicalest</option>
+    </select>
+</span>
                     </pre>
                 </span>
-
-
 
 
                 <!--Bootstrap DropDown-->
                 <span class="col-span-6">
                     <div class="dropdown">
-                        <div class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
-                            <li><div class="dropdown-image eye-transparent"></div>Send Message</li>
-                            <li><div class="dropdown-image person-transparent"></div>Settings</li>
-                            <li><div class="dropdown-image beaker-transparent"></div>Favorite</li>
+                        <div id="dlabel" class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
+                        <ul id="dropdown-1" class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+                            <li data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
+                            <li data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
+                            <li data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
                         </ul>
                     </div>
+                    <script type="text/javascript">
+                        $('#dropdown-1').on('click', 'li', function(e) {
+                        	var target = $(e.target),
+                                value = target.attr('data-value');
+                            target.parents('.dropdown').find('.dropdown-toggle').text(value);
+                        });
+                    </script>
                 </span>
                 <span class="col-span-6">
                     <pre data-language="html">
 <div class="dropdown">
-    <div class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
-        <li class="eye-transparent">Send Message</li>
-        <li class="person-transparent">Settings</li>
-        <li class="beaker-transparent">Favorite</li>
+    <div id="dlabel" class="dropdown-toggle" data-toggle="dropdown">Bootstrap Dropdown</div>
+    <ul id="dropdown-1" class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+        <li data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
+        <li data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
+        <li data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
     </ul>
 </div>
+<script type="text/javascript">
+    $('#dropdown-1').on('click', 'li', function(e) {
+        var target = $(e.target),
+                value = target.attr('data-value');
+        target.parents('.dropdown').find('.dropdown-toggle').text(value);
+    });
+</script>
+                    </pre>
+                </span>
+
+                <!--Bootstrap Typeahead-->
+                <span class="col-span-6">
+                    <input id="venue-name" type="text" data-provide="typeahead" placeholder="Typeahead"/>
+                    <script type="text/javascript">
+                        $('#venue-name').typeahead({
+                            minLength: 3,
+                            source: function(query, process) {
+                                var hardcodedOptions = ['a', 'aa', 'aaa', 'aaaa', 'aaaaa', 'aaaaaa', 'aaaaaaa', 'b', 'bb', 'bbb', 'bbbb', 'bbbbb', 'bbbbbb', 'bbbbbbb'];
+                                process(hardcodedOptions)
+                            }
+                        });
+                    </script>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<input id="venue-name" type="text" data-provide="typeahead" placeholder="Typeahead... type aaa or bbb"/>
+<script type="text/javascript">
+    $('#venue-name').typeahead({
+        minLength: 3,
+        source: function(query, process) {
+            var hardcodedOptions = ['a', 'aa', 'aaa', 'aaaa', 'aaaaa', 'aaaaaa', 'aaaaaaa', 'b', 'bb', 'bbb', 'bbbb', 'bbbbb', 'bbbbbb', 'bbbbbbb'];
+            process(hardcodedOptions)
+        }
+    });
+</script>
                     </pre>
                 </span>
             </div>
         </div>
     </span>
+
+
+    <!--Checkbox & Radio-->
+    <span class="col-span-12">
+        <div class="panel">
+            <div class="panel-heading">
+                <span class="panel-heading-primary">Checkbox & Radio</span>
+                <span class="panel-heading-secondary">03</span>
+            </div>
+            <div class="panel-primary">
+                <!--Checkbox-->
+                <span class="col-span-6">
+                    <span class="checkbox-wrapper">
+                        <input id="checkbox-1" type="checkbox"/>
+                        <label for="checkbox-1"></label>
+
+                        <input id="checkbox-2" type="checkbox" checked="checked"/>
+                        <label for="checkbox-2"></label>
+                    </span>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<span class="checkbox-wrapper">
+    <input id="checkbox-1" type="checkbox"/>
+    <label for="checkbox-1"></label>
+
+    <input id="checkbox-2" type="checkbox" checked/>
+    <label for="checkbox-2"></label>
+</span>
+                    </pre>
+                </span>
+
+
+                <!--Radio Button-->
+                <span class="col-span-6">
+                    <span class="radio-wrapper">
+                        <input name="radio-group" id="radio-1" type="radio"/>
+                        <label for="radio-1"></label>
+
+                        <input name="radio-group" id="radio-2" type="radio" checked="checked"/>
+                        <label for="radio-2"></label>
+                    </span>
+                </span>
+                <span class="col-span-6">
+                    <pre data-language="html">
+<span class="radio-wrapper">
+    <input name="radio-group" id="radio-1" type="radio"/>
+    <label for="radio-1"></label>
+
+    <input name="radio-group" id="radio-2" type="radio" checked/>
+    <label for="radio-2"></label>
+</span>
+                    </pre>
+                </span>
+            </div>
+        </div>
+    </span>
+
 </span>
 
 </body>
-    <!--<script src="http://localhost:9001/livereload.js?snipver=1"></script>-->
+    <script src="http://localhost:35729/livereload.js"></script>
 </html>
