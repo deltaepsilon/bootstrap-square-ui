@@ -18,3 +18,8 @@
   margin: 25px auto 36px;
   padding: 56px;
 }
+.white-background {
+  background-color: white;
+  display: block;
+  padding: 20px;
+}

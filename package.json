@@ -21,5 +21,6 @@
     , "grunt-contrib-concat": "*"
     , "grunt-contrib-uglify": "*"
     , "grunt-contrib-watch": "*"
+    , "grunt-html": "*"
   }
 }

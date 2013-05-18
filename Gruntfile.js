@@ -27,6 +27,11 @@ module.exports = function(grunt) {
                 }
             }
         },
+        htmllint: {
+            index: {
+                src: ['dist/index.html']
+            }
+        },
         watch: {
             less: {
                 options: { livereload: true },
@@ -41,14 +46,15 @@ module.exports = function(grunt) {
             html: {
                 options: { livereload: true },
                 files: ['dist/index.html'],
-                tasks: []
+                tasks: ['htmllint']
             }
         }
     });
-    grunt.registerTask('default', ['less', 'concat', 'uglify']);
+    grunt.registerTask('default', ['less', 'concat', 'uglify', 'htmllint']);
 
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-html");
 }

@@ -56,7 +56,7 @@
 // Large
 .btn-large {
   padding: @padding-large;
-  font-size: @font-size-large;
+  font-size: @font-size-base;
   border-radius: @border-radius-large;
 }
 
@@ -110,26 +110,28 @@ input[type="button"] {
 
 .btn {
   color: @btn-color;
-  .btn-pseudo-states(@btn-bg, @btn-border);
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
 }
 .btn-primary {
-  .btn-pseudo-states(@btn-primary-bg, @btn-primary-border);
+  .background-color-6;
 }
 // Warning appears as orange
 .btn-warning {
-  .btn-pseudo-states(@btn-bg-warning, @btn-warning-border);
+  .background-color-7;
 }
 // Danger and error appear as red
 .btn-danger {
-  .btn-pseudo-states(@btn-bg-danger, @btn-danger-border);
+  .background-color-3;
 }
 // Success appears as green
 .btn-success {
-  .btn-pseudo-states(@btn-bg-success, @btn-success-border);
+  .background-color-1;
 }
 // Info appears as blue-green
 .btn-info {
-  .btn-pseudo-states(@btn-bg-info, @btn-info-border);
+  .background-color-4;
 }
 
 
