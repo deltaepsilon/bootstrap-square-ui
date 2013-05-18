@@ -65,6 +65,7 @@
         .css({
           top: pos.top + pos.height
         , left: pos.left
+        , width: this.$element.outerWidth()
         })
         .show()
 
