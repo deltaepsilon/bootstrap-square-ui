@@ -1,10 +1,3 @@
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-    return connect.static(path.resolve(point));
-};
-
 module.exports = function(grunt) {
 	grunt.initConfig({
         less: {
@@ -34,42 +27,28 @@ module.exports = function(grunt) {
                 }
             }
         },
-        connect: {
-            livereload: {
-                options: {
-                    port: 9001,
-                    middleware: function(connect, options) {
-                        return [lrSnippet, folderMount(connect, options.base)]
-                    }
-                }
-            }
-        },
-        livereload: {
-            port: 35729
-        },
         watch: {
             less: {
+                options: { livereload: true },
                 files: ['less/*.less', 'dist/less/*.less'],
-                tasks: ['less', 'livereload']
+                tasks: ['less']
             },
             js: {
+                options: { livereload: true },
                 files: 'js/*.js',
-                tasks: ['concat:js', 'uglify', 'livereload']
+                tasks: ['concat:js', 'uglify']
             },
             html: {
+                options: { livereload: true },
                 files: ['dist/index.html'],
-                tasks: ['livereload']
+                tasks: []
             }
         }
     });
     grunt.registerTask('default', ['less', 'concat', 'uglify']);
 
-    grunt.registerTask('reload', ['livereload-start', 'connect', 'watch']);
-
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-livereload');
 }

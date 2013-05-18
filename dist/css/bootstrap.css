@@ -2629,6 +2629,7 @@ fieldset[disabled] .btn-link:focus {
   color: #ffffff;
   display: none;
   float: left;
+  font-size: 18px;
   left: 0;
   list-style: none;
   margin: 0;
