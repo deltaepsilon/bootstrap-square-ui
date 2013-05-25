@@ -18,3 +18,8 @@
   margin: 25px auto 36px;
   padding: 56px;
 }
+.lightest-background {
+  background-color: #ffffff;
+  display: block;
+  padding: 20px;
+}
