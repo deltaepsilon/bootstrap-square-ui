@@ -58,6 +58,12 @@
   padding: @padding-large;
   font-size: @font-size-base;
   border-radius: @border-radius-large;
+  width: 100%;
+}
+
+// Medium
+.btn-medium {
+  padding: @padding-medium;
 }
 
 // Small
@@ -107,11 +113,12 @@ input[type="button"] {
 
 // Alternate buttons
 // --------------------------------------------------
-
+button {
+  background-color: @black;
+}
 .btn {
   color: @btn-color;
   border: none;
-  width: 100%;
   text-transform: uppercase;
 }
 .btn-primary {
@@ -172,6 +179,31 @@ fieldset[disabled] .btn-link {
     &:focus {
       color: @grayDark;
       text-decoration: none;
+    }
+  }
+}
+
+// Link left image
+// --------------------------------------------------
+.btn-left-image {
+  padding: 0;
+
+  .btn-image {
+    float: left;
+    display: inline-block;
+  }
+
+  .btn-text {
+    display: inline-block;
+  }
+
+  &.btn-large {
+    .btn-image {
+      width: 60px;
+      height: 60px;
+    }
+    .btn-text {
+      padding: @padding-large;
     }
   }
 }

@@ -9,27 +9,35 @@
  */
 .background-color-0 {
   background-color: #ffffff;
+  border-color: #ffffff;
 }
 .background-color-1 {
   background-color: #227c5b;
+  border-color: #227c5b;
 }
 .background-color-2 {
   background-color: #28555b;
+  border-color: #28555b;
 }
 .background-color-3 {
   background-color: #e66f69;
+  border-color: #e66f69;
 }
 .background-color-4 {
   background-color: #695c8c;
+  border-color: #695c8c;
 }
 .background-color-5 {
   background-color: #8b5f79;
+  border-color: #8b5f79;
 }
 .background-color-6 {
   background-color: #5999a8;
+  border-color: #5999a8;
 }
 .background-color-7 {
   background-color: #dd864f;
+  border-color: #dd864f;
 }
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 article,
@@ -1741,11 +1749,11 @@ select:focus:invalid:focus {
   border: 1px solid #ccc;
 }
 .input-group-addon.input-small {
-  padding: 2px 10px;
+  padding: 30px;
   font-size: 13.6px;
 }
 .input-group-addon.input-large {
-  padding: 22px;
+  padding: 20px;
   font-size: 20px;
 }
 .input-group input:first-child,
@@ -1919,17 +1927,21 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-large {
-  padding: 22px;
+  padding: 20px;
   font-size: 16px;
   border-radius: 0px;
+  width: 100%;
+}
+.btn-medium {
+  padding: 50px;
 }
 .btn-small {
-  padding: 2px 10px;
+  padding: 30px;
   font-size: 13.6px;
   border-radius: 0px;
 }
 .btn-mini {
-  padding: 0 6px;
+  padding: 21px;
   font-size: 12px;
   border-radius: 0px;
 }
@@ -1947,26 +1959,33 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+button {
+  background-color: #000000;
+}
 .btn {
   color: #ffffff;
   border: none;
-  width: 100%;
   text-transform: uppercase;
 }
 .btn-primary {
   background-color: #5999a8;
+  border-color: #5999a8;
 }
 .btn-warning {
   background-color: #dd864f;
+  border-color: #dd864f;
 }
 .btn-danger {
   background-color: #e66f69;
+  border-color: #e66f69;
 }
 .btn-success {
   background-color: #227c5b;
+  border-color: #227c5b;
 }
 .btn-info {
   background-color: #695c8c;
+  border-color: #695c8c;
 }
 .btn-link,
 .btn-link:active,
@@ -2001,6 +2020,23 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #333333;
   text-decoration: none;
+}
+.btn-left-image {
+  padding: 0;
+}
+.btn-left-image .btn-image {
+  float: left;
+  display: inline-block;
+}
+.btn-left-image .btn-text {
+  display: inline-block;
+}
+.btn-left-image.btn-large .btn-image {
+  width: 60px;
+  height: 60px;
+}
+.btn-left-image.btn-large .btn-text {
+  padding: 20px;
 }
 .fade {
   opacity: 0;
@@ -3533,6 +3569,7 @@ button.close {
   vertical-align: middle;
 }
 .btn-group > .btn {
+  border-right: 1px solid #232323;
   position: relative;
   float: left;
 }
@@ -3580,29 +3617,9 @@ button.close {
   position: relative;
   border-radius: 0;
 }
-.btn-group > .btn:first-child {
-  margin-left: 0;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-}
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-}
-.btn-group > .btn.large:first-child {
-  margin-left: 0;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-}
-.btn-group > .btn.large:last-child,
-.btn-group > .large.dropdown-toggle {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-}
-.btn-group .dropdown-toggle:active,
-.btn-group.open .dropdown-toggle {
-  outline: 0;
+  border-right-width: 0;
 }
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
@@ -3631,28 +3648,12 @@ button.close {
   border-bottom-width: 5px;
 }
 .btn-group-vertical > .btn {
+  border-bottom: 1px solid #232323;
   display: block;
   float: none;
-  width: 100%;
-  max-width: 100%;
-}
-.btn-group-vertical .btn:first-child {
-  border-radius: 0;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
 }
 .btn-group-vertical .btn:last-child {
-  border-radius: 0;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.btn-group-vertical .btn-large:first-child {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
-.btn-group-vertical .btn-large:last-child {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-bottom-width: 0;
 }
 .btn-group-justified {
   display: table;
@@ -3661,6 +3662,7 @@ button.close {
 .btn-group-justified .btn {
   float: none;
   display: table-cell;
+  margin: 1em;
   width: 1%;
 }
 .btn-group[data-toggle="buttons-radio"] > .btn > input[type="radio"],
@@ -3740,7 +3742,7 @@ button.close {
 }
 .pagination-large > li > a,
 .pagination-large > li > span {
-  padding: 22px;
+  padding: 20px;
   font-size: 20px;
 }
 .pagination-large > li:first-child > a,
@@ -3769,12 +3771,12 @@ button.close {
 }
 .pagination-small > li > a,
 .pagination-small > li > span {
-  padding: 2px 10px;
+  padding: 30px;
   font-size: 13.6px;
 }
 .pagination-mini > li > a,
 .pagination-mini > li > span {
-  padding: 0 6px;
+  padding: 21px;
   font-size: 12px;
 }
 .pager {
@@ -4348,15 +4350,14 @@ a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
+  font-size: 14px;
+  font-weight: lighter;
   line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
-  border-radius: 10px;
+  border-radius: 100px;
+  margin: 0 1em;
 }
 .badge:empty {
   display: none;
@@ -4852,9 +4853,9 @@ a.list-group-item.active > .badge,
 .placemark-white,
 .ellipse-transparent-small,
 .ellipse-transparent-large,
-.start-white,
+.play,
 .pause,
-.start-transparent,
+.play-transparent,
 .speaker-white-small,
 .expand-white-small,
 .expand-dark-large,
@@ -4865,7 +4866,7 @@ a.list-group-item.active > .badge,
 .airplane-large,
 .airplane-small,
 .arrow-swoop-left,
-.video-camera-large,
+.video-large,
 .person-white,
 .dollar-bill,
 .video-medium,
@@ -4902,7 +4903,7 @@ a.list-group-item.active > .badge,
 .tv,
 .pause-circle,
 .gears-large,
-.tuners-white-small,
+.tuners,
 .reload-white-large,
 .play-circle-large,
 .star-transparent-large,
@@ -4938,23 +4939,15 @@ a.list-group-item.active > .badge,
 }
 .heart-red {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .skype {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .facebook {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .twitter {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .loupe-white-large {
   background-position: -53px -5px;
@@ -4963,63 +4956,39 @@ a.list-group-item.active > .badge,
 }
 .loupe-white-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-left-white-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -50px -89px;
 }
 .arrow-right-white-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -48px -141px;
 }
 .arrow-right-green-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-right-transparent-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-down-white-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-up-white-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-up-transparent-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-down-transparent-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-right-white-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-left-white-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .quotation-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .loupe-dark-large {
   background-position: -150px -17px;
@@ -5028,376 +4997,231 @@ a.list-group-item.active > .badge,
 }
 .loupe-dark-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .blurb-box-green {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .check-green {
   background-position: -151px -208px;
 }
 .x-red {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .check-white {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .x-white {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .ellipse-white-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .ellipse-white-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .placemark-transparent-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .triangle-down-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-down-white-extra-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .arrow-down-transparent-extra-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .clock-transparent-extra-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .placemark-white {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -441px 4px;
 }
 .ellipse-transparent-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .ellipse-transparent-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
-.start-white {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+.play {
+  background-position: -193px -4px;
 }
 .pause {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -193px -43px;
 }
-.start-transparent {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+.play-transparent {
+  background-position: -209px -92px;
 }
 .speaker-white-small {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -195px -118px;
 }
 .expand-white-small {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -194px -163px;
 }
 .expand-dark-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .reload-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .speaker-dark {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .link-white-small {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -195px -356px;
 }
 .link-white-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .airplane-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .airplane-small {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -194px -487px;
 }
 .arrow-swoop-left {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -195px -527px;
 }
-.video-camera-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+.video-large {
+  background-position: -192px -554px;
 }
 .person-white {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -251px 2px;
 }
 .dollar-bill {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -253px -47px;
 }
 .video-medium {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .diamond {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -253px -150px;
 }
 .speaker-white-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .star-white {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .heart-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .clock-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .clock-dark {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .video-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .mailbox {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -306px 1px;
 }
 .placemark-white-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .gears {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -306px -94px;
 }
 .speaker-diagonal {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -307px -149px;
 }
 .camera {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -306px -203px;
 }
 .light-bulb {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -305px -258px;
 }
 .notepad {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .loupe-thin {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .reload-white {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .star-blue {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .thumbs-up-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -424px -458px;
 }
 .thumbs-up {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -367px -49px;
 }
 .truck {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -369px -98px;
 }
 .eye-white {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -369px -149px;
 }
 .bubble-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -385px -217px;
 }
 .bubble-medium {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -369px -200px;
 }
 .bubble-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .bubble-extra-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .beaker-white {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -367px -401px;
 }
 .record {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -367px -450px;
 }
-.star-transparent .placemark-white-extra-large {
+.star-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+}
+.placemark-white-extra-large {
+  background-position: 0px 0px;
 }
 .sun-small {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .bubble-extra-large {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+  background-position: -426px -116px;
 }
 .tv {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .pause-circle {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .gears-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
-.tuners-white-small {
-  background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
+.tuners {
+  background-position: -441px -404px;
 }
 .reload-white-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .play-circle-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .star-transparent-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .airplane-transparent-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .tuners-transparent-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .sun-large {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .flow-purple {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .flow-transparent {
   background-position: 0px 0px;
-  width: 0px;
-  height: 0px;
 }
 .square-ui-hexagon {
   background-position: -348px -578px;

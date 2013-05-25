@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.registerTask('default', ['less', 'concat', 'uglify', 'htmllint']);
+    grunt.registerTask('default', ['less', 'concat', 'uglify']);
 
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-concat");

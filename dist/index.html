@@ -172,7 +172,7 @@
 
             <!--Bootstrap Typeahead-->
             <div class="col-span-6">
-                <input id="venue-name=0" type="text" data-provide="typeahead" placeholder="Typeahead"/>
+                <input id="venue-name-0" type="text" data-provide="typeahead" placeholder="Typeahead"/>
                 <script type="text/javascript">
                     $('#venue-name-0').typeahead({
                         minLength: 3,
@@ -212,7 +212,7 @@
         <div class="panel-primary">
             <!--Checkbox-->
             <div class="col-span-6 lightest-background extra-padding">
-                <span class="checkbox-wrapper white-background">
+                <span class="checkbox-wrapper">
                     <input id="checkbox-0" type="checkbox"/>
                     <label for="checkbox-0"></label>
 
@@ -235,7 +235,7 @@
 
             <!--Radio Button-->
             <div class="col-span-6 lightest-background extra-padding">
-                <span class="radio-wrapper white-background">
+                <span class="radio-wrapper">
                     <input name="radio-group" id="radio-0" type="radio"/>
                     <label for="radio-0"></label>
 
@@ -296,51 +296,57 @@
 
             <div class="col-span-12">
                 <div class="col-span-6">
-                    <button class="btn btn-large background-color-6">button badge<span class="button-badge background-color-3">2</span></button>
+                    <button class="btn btn-large background-color-6">button badge<span class="badge background-color-3">2</span></button>
                 </div>
                 <div class="col-span-6">
                         <pre data-language="html">
-<button class="btn btn-large background-color-6">button badge<span class="button-badge background-color-3">2</span></button>
+<button class="btn btn-large background-color-6">button badge<span class="badge background-color-3">2</span></button>
                         </pre>
                     </div>
                 </div>
 
                 <div class="col-span-12">
                     <div class="col-span-6">
-                        <button class="btn btn-large button-left-image background-color-1 dollar-bill">button left image</button>
+                        <button class="btn btn-large btn-left-image">
+                            <span class="btn-image background-color-1 dollar-bill"></span>
+                            <span class="btn-text">button left image</span>
+                        </button>
                     </div>
                     <div class="col-span-6">
                         <pre data-language="html">
-<button class="btn btn-large button-left-image background-color-1 dollar-bill">button left image</button>
+<button class="btn btn-large btn-left-image">
+    <span class="btn-image background-color-1 dollar-bill"></span>
+    <span class="btn-text">button left image</span>
+</button>
                         </pre>
                     </div>
                 </div>
 
 
-                <div class="col-offset-12">
+                <div class="col-span-12">
                     <div class="col-span-6">
                         <span class="btn-group">
-                            <button class="btn btn-small background-color-2 thumbs"></button>
+                            <button class="btn btn-small background-color-2 thumbs-up"></button>
                             <button class="btn btn-small gears"></button>
-                            <button class="btn btn-small bubble-small"></button>
+                            <button class="btn btn-small bubble-medium"></button>
                         </span>
                     </div>
                     <div class="col-span-6">
                         <pre data-language="html">
 <span class="btn-group">
-    <button class="btn btn-small background-color-2 thumbs"></button>
+    <button class="btn btn-small background-color-2 thumbs-up"></button>
     <button class="btn btn-small gears"></button>
-    <button class="btn btn-small bubble-small"></button>
+    <button class="btn btn-small bubble-medium"></button>
 </span>
                         </pre>
                     </div>
                 </div>
 
-                <div class="col-offset-12">
+                <div class="col-span-12">
                     <div class="col-span-6">
                         <span class="btn-group">
-                            <button class="btn btn-small arrow-left-white-small"></button>
-                            <button class="btn btn-small arrow-right-white-small"></button>
+                            <button class="btn btn-small arrow-left-white-large"></button>
+                            <button class="btn btn-small arrow-right-white-large"></button>
                         </span>
                     </div>
                     <div class="col-span-6">
@@ -349,11 +355,12 @@
     <button class="btn btn-small arrow-left-white-small"></button>
     <button class="btn btn-small arrow-right-white-small"></button>
 </span>
-                        </pre>
-                    </div>
+                    </pre>
                 </div>
+            </div>
 
 
+            <div class="col-span-12">
                 <div class="col-span-6">
                     <span class="btn-group-justified">
                         <button class="btn btn-small person-white"></button>
@@ -364,47 +371,108 @@
                         <button class="btn btn-small speaker-diagonal"></button>
                         <button class="btn btn-small placemark-white background-color-5"></button>
                         <button class="btn btn-small thumbs-up"></button>
-                        <button class="btn btn-small video-small"></button>
+                        <button class="btn btn-small video-large"></button>
                         <button class="btn btn-small camera"></button>
-                        <button class="btn btn-small tuners-white-small"></button>
+                        <button class="btn btn-small tuners"></button>
                         <button class="btn btn-small truck"></button>
                         <button class="btn btn-small diamond"></button>
                         <button class="btn btn-small light-bulb background-color-7"></button>
                         <button class="btn btn-small record"></button>
                         <button class="btn btn-small beaker-white"></button>
                     </span>
+                </div>
 
+                <div class="col-span-6">
+                    <pre data-language="html">
+<span class="btn-group-justified">
+    <button class="btn btn-small person-white"></button>
+    <button class="btn btn-small gears"></button>
+    <button class="btn btn-small mailbox"></button>
+    <button class="btn btn-small eye-white"></button>
+    <button class="btn btn-small dollar-bill background-color-1"></button>
+    <button class="btn btn-small speaker-diagonal"></button>
+    <button class="btn btn-small placemark-white background-color-5"></button>
+    <button class="btn btn-small thumbs-up"></button>
+    <button class="btn btn-small video-large"></button>
+    <button class="btn btn-small camera"></button>
+    <button class="btn btn-small tuners"></button>
+    <button class="btn btn-small truck"></button>
+    <button class="btn btn-small diamond"></button>
+    <button class="btn btn-small light-bulb background-color-7"></button>
+    <button class="btn btn-small record"></button>
+    <button class="btn btn-small beaker-white"></button>
+</span>
+                    </pre>
+                </div>
+           </div>
+
+            <div class="col-span-12">
+                <div class="col-span-6">
                     <span class="btn-group-justified">
-                        <button class="btn btn btn-mini play"></button>
-                        <button class="btn btn-mini pause"></button>
-                        <button class="btn btn-mini speaker-white-small"></button>
-                        <button class="btn btn-mini expand-white-small"></button>
-                        <button class="btn btn-mini airplane-small"></button>
-                        <button class="btn btn-mini link-white-small"></button>
-                        <button class="btn btn-mini arrow-swoop-left"></button>
+                        <button class="btn btn-mini play"></button>
+                        <button class="btn btn-mini pause background-color-1"></button>
+                        <button class="btn btn-mini speaker-white-small background-color-2"></button>
+                        <button class="btn btn-mini expand-white-small background-color-3"></button>
+                        <button class="btn btn-mini airplane-small background-color-4"></button>
+                        <button class="btn btn-mini link-white-small background-color-5"></button>
+                        <button class="btn btn-mini arrow-swoop-left background-color-6"></button>
                     </span>
-
-                    <span class="btn-group-vertical">
-                        <button class="btn btn-small thumbs-up background-color-3"></button>
-                        <button class="btn btn-small gears"></button>
-                        <button class="btn btn-small bubble-small"></button>
-                    </span>
-
-                    <span class="btn-group-vertical">
-                        <button class="btn btn-large thumbs-up-large background-color-1"></button>
-                        <button class="btn btn-large bubble-medium background-color-5"></button>
-                    </span>
-
-
                 </div>
                 <div class="col-span-6">
                     <pre data-language="html">
+<span class="btn-group-justified">
+    <button class="btn btn-mini play background-color-0"></button>
+    <button class="btn btn-mini pause background-color-1"></button>
+    <button class="btn btn-mini speaker-white-small background-color-2"></button>
+    <button class="btn btn-mini expand-white-small background-color-3"></button>
+    <button class="btn btn-mini airplane-small background-color-4"></button>
+    <button class="btn btn-mini link-white-small background-color-5"></button>
+    <button class="btn btn-mini arrow-swoop-left background-color-6"></button>
+</span>
+                    </pre>
+                </div>
+            </div>
 
+
+            <div class="col-span-12">
+                <div class="col-span-6">
+                    <span class="btn-group-vertical">
+                        <button class="btn btn-small thumbs-up background-color-3"></button>
+                        <button class="btn btn-small gears"></button>
+                        <button class="btn btn-small bubble-medium"></button>
+                    </span>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<span class="btn-group-vertical">
+    <button class="btn btn-small thumbs-up background-color-3"></button>
+    <button class="btn btn-small gears"></button>
+    <button class="btn btn-small bubble-medium"></button>
+</span>
+                    </pre>
+                </div>
+            </div>
+
+
+            <div class="col-span-12">
+                <div class="col-span-6">
+                    <span class="btn-group-vertical">
+                        <button class="btn btn-medium thumbs-up-large background-color-1"></button>
+                        <button class="btn btn-medium bubble-extra-large background-color-5"></button>
+                    </span>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<span class="btn-group-vertical">
+    <button class="btn btn-medium thumbs-up-large background-color-1"></button>
+    <button class="btn btn-medium bubble-large background-color-5"></button>
+</span>
                     </pre>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <script src="http://localhost:35729/livereload.js"></script>
 </body>
