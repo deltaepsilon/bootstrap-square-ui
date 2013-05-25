@@ -7,6 +7,10 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
+.background-color-00 {
+  background-color: #232323;
+  border-color: #232323;
+}
 .background-color-0 {
   background-color: #ffffff;
   border-color: #ffffff;
@@ -38,6 +42,10 @@
 .background-color-7 {
   background-color: #dd864f;
   border-color: #dd864f;
+}
+.background-color-7 {
+  background-color: #1c6348;
+  border-color: #1c6348;
 }
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 article,
@@ -1451,10 +1459,10 @@ textarea::-webkit-input-placeholder {
 }
 .input-search-wrapper .input-search-submit.input-small {
   width: 43px;
-  background-position: -135px -44px;
+  background-position: -138px -53px;
 }
 .input-search-wrapper .input-search-submit.input-small:hover {
-  background-position: -58px -45px;
+  background-position: -61px -53px;
 }
 .checkbox-wrapper label {
   border: 1px solid transparent;
@@ -1471,8 +1479,7 @@ textarea::-webkit-input-placeholder {
 .checkbox-wrapper input[type="checkbox"]:checked + label {
   background-image: url('../img/spritesheet-retina.png');
   background-size: 1000px 1000px;
-  background-position: -151px -208px;
-  background-position: -150px -205px;
+  background-position: -151px -262px;
   background-color: #227c5b;
   border-color: #227c5b;
   outline: 1px solid #227c5b;
@@ -1495,8 +1502,8 @@ textarea::-webkit-input-placeholder {
 .radio-wrapper input[type="radio"]:checked + label {
   background-image: url('../img/spritesheet-retina.png');
   background-size: 1000px 1000px;
-  background-position: -151px -208px;
-  background-position: -149px -204px;
+  background-position: -151px -262px;
+  background-position: -149px -260px;
   background-color: #227c5b;
   border-color: #227c5b;
 }
@@ -1974,6 +1981,8 @@ button {
 .btn-warning {
   background-color: #dd864f;
   border-color: #dd864f;
+  background-color: #1c6348;
+  border-color: #1c6348;
 }
 .btn-danger {
   background-color: #e66f69;
@@ -4424,29 +4433,32 @@ a.list-group-item.active > .badge,
   }
 }
 .progress {
+  background: #d7d2cc;
   overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border-radius: 0px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .progress-bar {
   float: left;
   width: 0%;
-  height: 100%;
-  font-size: 12px;
-  color: #fff;
+  font-size: 20px;
+  color: #ffffff;
   text-align: center;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #227c5b;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: relative;
   -webkit-transition: width 0.6s ease;
   -moz-transition: width 0.6s ease;
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
+}
+.progress-bar-text {
+  font-size: 20px;
+  padding: 20px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .progress-striped .progress-bar {
   background-color: #227c5b;
@@ -4756,10 +4768,24 @@ a.list-group-item.active > .badge,
 }
 .table-cell {
   display: table-cell;
+  position: relative;
   white-space: nowrap;
 }
 .full-width {
   width: 100%;
+}
+.block {
+  display: block;
+}
+.light-text {
+  color: #ffffff;
+}
+.abs-left {
+  position: absolute;
+  top: 0;
+  right: inherit;
+  bottom: 0;
+  left: 0;
 }
 @-ms-viewport {
   width: device-width;
@@ -5009,19 +5035,19 @@ a.list-group-item.active > .badge,
   background-position: 0px 0px;
 }
 .check-green {
-  background-position: -151px -208px;
+  background-position: 0px 0px;
 }
 .x-red {
   background-position: 0px 0px;
 }
 .check-white {
-  background-position: 0px 0px;
+  background-position: -151px -262px;
 }
 .x-white {
   background-position: 0px 0px;
 }
 .ellipse-white-large {
-  background-position: 0px 0px;
+  background-position: -131px -342px;
 }
 .ellipse-white-transparent {
   background-position: 0px 0px;
@@ -5231,7 +5257,7 @@ a.list-group-item.active > .badge,
   background-position: 0px 0px;
 }
 .square-ui-hexagon {
-  background-position: -348px -578px;
+  background-position: -638px -819px;
   width: 140px;
   height: 147px;
 }
@@ -5274,4 +5300,38 @@ a.list-group-item.active > .badge,
   background-color: #8b5f79;
   border-color: #8b5f79;
   color: #ffffff;
+}
+.bar {
+  background-color: #d7d2cc;
+  position: relative;
+}
+.bar .bar-spacer {
+  width: 100%;
+  height: 100%;
+  background-color: #d7d2cc;
+}
+.bar .bar-normal {
+  min-height: 20px;
+}
+.bar .bar-small {
+  height: 10px;
+}
+.bar .bar-mini {
+  height: 7px;
+}
+.bar .bar-left {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: inherit;
+  bottom: 0;
+  left: 0;
+}
+.bar .bar-slider {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: lighter;
+  padding: 0px 10px;
+  vertical-align: top;
+  height: 100%;
 }

@@ -46,9 +46,22 @@
 
 .table-cell {
   display: table-cell;
+  position: relative;
   white-space: nowrap;
 }
 
 .full-width {
   width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.light-text {
+  color: @white;
+}
+
+.abs-left {
+  .absLayout(0, inherit, 0, 0);
 }

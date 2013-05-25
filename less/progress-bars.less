@@ -43,27 +43,30 @@
 
 // Outer container
 .progress {
+  background: @gray1;
   overflow: hidden;
-  height: @line-height-base;
-  margin-bottom: @line-height-base;
-  background-color: @progress-bg;
-  border-radius: @border-radius-base;
-  .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  text-align: center;
 }
 
 // Bar of progress
 .progress-bar {
   float: left;
   width: 0%;
-  height: 100%;
-  font-size: 12px;
-  color: #fff;
+  font-size: 20px;
+  color: @white;
   text-align: center;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  background-color: @progress-bar-bg;
-  .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+  padding: 20px;
+  position: relative;
   .transition(width .6s ease);
 }
+
+.progress-bar-text {
+  font-size: 20px;
+  padding: 20px;
+  z-index: 1;
+  .absLayout();
+}
+
 
 // Striped bars
 .progress-striped .progress-bar {

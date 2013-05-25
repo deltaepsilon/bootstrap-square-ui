@@ -487,7 +487,7 @@
                 <div class="col-span-6">
 
                     <div class="calendar">
-                        <div class="calendar-nav btn-group">
+                        <div class="calendar-nav btn-group block">
                             <div class="table-cell">
                                 <button class="btn btn-small arrow-left-white-large"></button>
                             </div>
@@ -508,7 +508,7 @@
                                     <th>thu</th>
                                     <th>fri</th>
                                     <th>sat</th>
-                                </th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -569,7 +569,7 @@
                 <div class="col-span-6">
                     <pre data-language="html">
 <div class="calendar">
-    <div class="calendar-nav btn-group">
+    <div class="calendar-nav btn-group block">
         <div class="table-cell">
             <button class="btn btn-small arrow-left-white-large"></button>
         </div>
@@ -583,14 +583,14 @@
     <table class="calendar-body">
         <thead>
         <tr class="background-color-1">
-        <th>sun</th>
-        <th>mon</th>
-        <th>tue</th>
-        <th>wed</th>
-        <th>thu</th>
-        <th>fri</th>
-        <th>sat</th>
-        </th>
+            <th>sun</th>
+            <th>mon</th>
+            <th>tue</th>
+            <th>wed</th>
+            <th>thu</th>
+            <th>fri</th>
+            <th>sat</th>
+        </tr>
         </thead>
         <tbody>
         <tr>
@@ -664,6 +664,147 @@
         <div class="panel-primary">
             <div class="col-span-12">
                 <div class="col-span-6">
+                    <div class="bar">
+                        <div class="bar-left background-color-1" style="width: 45%">
+                            <div class="bar-slider background-color-7 light-text">450</div>
+                        </div>
+                        <div class="bar-spacer bar-normal"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="bar">
+    <div class="bar-left background-color-1" style="width: 45%;">
+        <div class="bar-slider background-color-7 light-text">450</div>
+    </div>
+</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="bar">
+                        <div class="bar-left bar-spacer" style="width: 45%; z-index: 1;">
+                            <div class="bar-slider background-color-7 light-text">450</div>
+                        </div>
+                        <div class="bar-left background-color-1" style="width: 65%;">
+                            <div class="bar-slider background-color-7 light-text">650</div>
+                        </div>
+                        <div class="bar-spacer bar-normal"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="bar">
+    <div class="bar-left bar-spacer" style="width: 45%; z-index: 1">
+        <div class="bar-slider background-color-7 light-text">450</div>
+    </div>
+    <div class="bar-left background-color-1" style="width: 65%;">
+        <div class="bar-slider background-color-7 light-text">650</div>
+    </div>
+    <div class="bar-spacer bar-normal"></div>
+</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="bar">
+                        <div class="bar-left bar-normal background-color-1" style="width: 45%; z-index: 1"></div>
+                        <div class="bar-spacer bar-normal"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="bar">
+    <div class="bar-left bar-normal background-color-1" style="width: 45%; z-index: 1"></div>
+    <div class="bar-spacer bar-normal"></div>
+</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="progress">
+                        <div class="progress-bar background-color-1" style="width: 75%">Uploading (75%)</div>
+                        <div class="progress-bar-spacer"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="progress">
+    <div class="progress-bar background-color-1" style="width: 75%">Uploading (75%)</div>
+    <div class="progress-bar-spacer"></div>
+</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="progress">
+                        <div class="btn btn-small background-color-1 ellipse-white-large table-cell"></div>
+                        <div class="inline background-color-00 table-cell full-width light-text">
+                            <span class="progress-bar-text">Upload.jpg</span>
+                            <div class="progress-bar abs-left background-color-7" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="progress">
+    <div class="btn btn-small background-color-1 ellipse-white-large table-cell"></div>
+    <div class="inline background-color-00 table-cell full-width light-text">
+        <span class="progress-bar-text">Upload.jpg</span>
+        <div class="progress-bar abs-left background-color-7" style="width: 75%"></div>
+    </div>
+</div>
+                    </pre>
+                </div>
+
+
+                <div class="col-span-6">
+                    <div class="bar">
+                        <div class="bar-left background-color-1" style="width: 25%;"></div>
+                        <div class="bar-spacer bar-small"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="bar">
+    <div class="bar-left background-color-1" style="width: 25%;"></div>
+    <div class="bar-spacer bar-small"></div>
+</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="bar">
+                        <div class="bar-left bar-mini background-color-1" style="width: 75%;"></div>
+                        <div class="bar-spacer bar-mini"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="bar">
+    <div class="bar-left bar-mini background-color-1" style="width: 75%;"></div>
+    <div class="bar-spacer bar-mini"></div>
+</div>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--****************************************    On & Off    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">On & Off</span>
+            <span class="panel-heading-secondary">07</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+
+                <div class="col-span-6">
 
                 </div>
                 <div class="col-span-6">
@@ -671,10 +812,12 @@
 
                     </pre>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
 
 
 <script src="http://localhost:35729/livereload.js"></script>
