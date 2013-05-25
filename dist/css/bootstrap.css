@@ -715,7 +715,7 @@ address {
 code,
 pre {
   padding: 0 3px 2px;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: "Open Sans", Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 14px;
   color: #333333;
   border-radius: 4px;
@@ -3568,16 +3568,16 @@ button.close {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-group > .btn {
+.btn-group .btn {
   border-right: 1px solid #232323;
   position: relative;
   float: left;
 }
-.btn-group > .btn + btn {
+.btn-group .btn + btn {
   margin-left: -1px;
 }
-.btn-group > .btn:hover,
-.btn-group > .btn:active {
+.btn-group .btn:hover,
+.btn-group .btn:active {
   z-index: 2;
 }
 .btn-toolbar:before,
@@ -4754,6 +4754,13 @@ a.list-group-item.active > .badge,
 .affix {
   position: fixed;
 }
+.table-cell {
+  display: table-cell;
+  white-space: nowrap;
+}
+.full-width {
+  width: 100%;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -5227,4 +5234,44 @@ a.list-group-item.active > .badge,
   background-position: -348px -578px;
   width: 140px;
   height: 147px;
+}
+.calendar-body {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.calendar-body thead {
+  font-family: "Open Sans", Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.calendar-body thead th {
+  text-align: center;
+  font-weight: lighter;
+  padding: 7px;
+}
+.calendar-body tbody {
+  background-color: #000000;
+}
+.calendar-body tbody tr:last-of-type td {
+  border-bottom: none;
+}
+.calendar-body tbody td {
+  border-color: #232323;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  cursor: pointer;
+  padding: 11px;
+}
+.calendar-body tbody td:last-of-type {
+  border-width: 0 0 1x 0;
+}
+.calendar-body tbody .inactive {
+  color: #4a4a4a;
+}
+.calendar-body tbody td:hover,
+.calendar-body tbody .active {
+  background-color: #8b5f79;
+  border-color: #8b5f79;
+  color: #ffffff;
 }
