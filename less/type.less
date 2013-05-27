@@ -87,6 +87,7 @@
 // -------------------------
 
 p {
+  font-family: @font-family-monospace;
   margin: 0 0 (@line-height-base / 2);
 }
 .lead {
@@ -144,7 +145,6 @@ h1, h2, h3, h4, h5, h6,
   }
 
   &.big {
-    text-align: center;
     text-transform: uppercase;
   }
 }
@@ -166,10 +166,13 @@ h6 {
   margin-bottom: (@line-height-base / 2);
 }
 
-h1, .h1 { font-size: (@font-size-base * 2.75); } // ~44px
-h2, .h2 { font-size: (@font-size-base * 2.25); } // ~36px
-h3, .h3 { font-size: (@font-size-base * 1.75); } // ~28px
-h4, .h4 { font-size: (@font-size-base * 1.25); } // ~20px
+h1, .h1 {
+  font-size: (@font-size-base * 2.5625); // ~41px
+  font-weight: bold;
+}
+h2, .h2 { font-size: (@font-size-base * 2.125); } // ~34px
+h3, .h3 { font-size: (@font-size-base * 1.5625); } // ~25px
+h4, .h4 { font-size: (@font-size-base * 1.1875); } // ~19px
 h5, .h5 { font-size:  @font-size-base; }
 h6, .h6 { font-size: (@font-size-base * 0.85); } // ~16.6px
 

@@ -398,6 +398,7 @@ img {
   src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxsBo4hlZyBvkZICS3KpNonM.woff) format('woff');
 }
 p {
+  font-family: "Open Sans", Monaco, Menlo, Consolas, "Courier New", monospace;
   margin: 0 0 10px;
 }
 .lead {
@@ -499,7 +500,6 @@ h6.big,
 .h4.big,
 .h5.big,
 .h6.big {
-  text-align: center;
   text-transform: uppercase;
 }
 h1,
@@ -520,19 +520,20 @@ h6 {
 }
 h1,
 .h1 {
-  font-size: 44px;
+  font-size: 41px;
+  font-weight: bold;
 }
 h2,
 .h2 {
-  font-size: 36px;
+  font-size: 34px;
 }
 h3,
 .h3 {
-  font-size: 28px;
+  font-size: 25px;
 }
 h4,
 .h4 {
-  font-size: 20px;
+  font-size: 19px;
 }
 h5,
 .h5 {
@@ -4860,7 +4861,7 @@ a.list-group-item.active > .badge,
 .loupe-white-small,
 .arrow-left-white-large,
 .arrow-right-white-large,
-.arrow-right-green-large,
+.arrow-right-green,
 .arrow-right-transparent-large,
 .arrow-down-white-small,
 .arrow-up-white-small,
@@ -4996,8 +4997,8 @@ a.list-group-item.active > .badge,
 .arrow-right-white-large {
   background-position: -48px -141px;
 }
-.arrow-right-green-large {
-  background-position: 0px 0px;
+.arrow-right-green {
+  background-position: -73px -212px;
 }
 .arrow-right-transparent-large {
   background-position: 0px 0px;
@@ -5032,19 +5033,19 @@ a.list-group-item.active > .badge,
   background-position: 0px 0px;
 }
 .blurb-box-green {
-  background-position: 0px 0px;
+  background-position: -151px -109px;
 }
 .check-green {
-  background-position: 0px 0px;
+  background-position: -150px -162px;
 }
 .x-red {
-  background-position: 0px 0px;
+  background-position: -151px -217px;
 }
 .check-white {
   background-position: -151px -262px;
 }
 .x-white {
-  background-position: 0px 0px;
+  background-position: -151px -316px;
 }
 .ellipse-white-large {
   background-position: -131px -342px;
@@ -5334,4 +5335,118 @@ a.list-group-item.active > .badge,
   padding: 0px 10px;
   vertical-align: top;
   height: 100%;
+}
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  position: relative;
+}
+.toggle.toggle-dark {
+  background-color: #232323;
+  border: none;
+}
+.toggle .slider {
+  width: 20px;
+  height: 100%;
+  -webkit-transition: margin-left 300ms ease 0ms;
+  -moz-transition: margin-left 300ms ease 0ms;
+  -o-transition: margin-left 300ms ease 0ms;
+  transition: margin-left 300ms ease 0ms;
+}
+.toggle-off {
+  border: 2px solid #e66f69;
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -151px -217px;
+  background-position: -130px -205px;
+}
+.toggle-off.toggle-dark {
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -151px -316px;
+  background-position: -128px -302px;
+}
+.toggle-off.toggle-dark .slider {
+  margin-left: 60px;
+}
+.toggle-off .slider {
+  background-color: #e66f69;
+  margin-left: 58px;
+}
+.toggle-on {
+  border: 2px solid #227c5b;
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -150px -162px;
+  background-position: -109px -149px;
+}
+.toggle-on.toggle-dark {
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -151px -262px;
+  background-position: -107px -251px;
+}
+.toggle-on .slider {
+  background-color: #227c5b;
+}
+.tag {
+  display: inline-block;
+  font-family: "Open Sans", Monaco, Menlo, Consolas, "Courier New", monospace;
+  padding: 2px 8px;
+}
+.tag-padded {
+  padding: 4px 14px;
+}
+.tag-rounded {
+  border-radius: 100px;
+}
+.tag-circle {
+  height: 42px;
+  width: 42px;
+  border-radius: 100px;
+  vertical-align: middle;
+}
+.tag-callout {
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -151px -109px;
+  padding: 0 4px;
+  font-size: 12px;
+  width: 23px;
+  height: 22px;
+}
+.tag-remove {
+  border: 1px solid #d7d2cc;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 50px 10px 10px;
+  position: relative;
+}
+.tag-remove:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: inherit;
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -151px -316px;
+  background-color: #227c5b;
+  border-color: #227c5b;
+  background-position: -138px -302px;
+  width: 40px;
+}
+.tag-arrow-right {
+  background-image: url('../img/spritesheet-retina.png');
+  background-size: 1000px 1000px;
+  background-position: -73px -212px;
+  height: 16px;
+  width: 12px;
+  vertical-align: middle;
+  display: inline-block;
 }
