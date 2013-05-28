@@ -48,6 +48,7 @@
   display: table-cell;
   position: relative;
   white-space: nowrap;
+  vertical-align: top;
 }
 
 .full-width {
@@ -64,4 +65,19 @@
 
 .abs-left {
   .absLayout(0, inherit, 0, 0);
+}
+
+.sub {
+  .clearfix();
+  color: @gray3;
+  font-size: @font-size-small;
+}
+
+.circle {
+  border-radius: 1000px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
 }

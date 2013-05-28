@@ -46,7 +46,8 @@ module.exports = function(grunt) {
             html: {
                 options: { livereload: true },
                 files: ['dist/index.html'],
-                tasks: ['htmllint']
+//                tasks: ['htmllint']
+                tasks: []
             }
         }
     });
