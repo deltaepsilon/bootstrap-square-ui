@@ -512,10 +512,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="inactive">1</td>
-                                    <td class="inactive">2</td>
-                                    <td class="inactive">3</td>
-                                    <td class="inactive">4</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
                                     <td>5</td>
                                     <td>6</td>
                                     <td>7</td>
@@ -594,10 +594,10 @@
         </thead>
         <tbody>
         <tr>
-            <td class="inactive">1</td>
-            <td class="inactive">2</td>
-            <td class="inactive">3</td>
-            <td class="inactive">4</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
             <td>5</td>
             <td>6</td>
             <td>7</td>
@@ -805,11 +805,47 @@
             <div class="col-span-12">
 
                 <div class="col-span-6">
+                    <div class="toggle toggle-on">
+                        <div class="slider"></div>
+                    </div>
 
+                    <div class="toggle toggle-off">
+                        <div class="slider"></div>
+                    </div>
                 </div>
                 <div class="col-span-6">
                     <pre data-language="html">
+<div class="toggle toggle-on">
+    <div class="slider"></div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.toggle').click(function() {
+            $(this).toggleClass('toggle-off').toggleClass('toggle-on');
+        });
+    });
+</script>
+                    </pre>
+                </div>
 
+            </div>
+
+            <div class="col-span-12">
+
+                <div class="col-span-6">
+                    <div class="toggle toggle-dark toggle-on">
+                        <div class="slider"></div>
+                    </div>
+
+                    <div class="toggle toggle-dark toggle-off">
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="toggle toggle-dark toggle-on">
+    <div class="slider"></div>
+</div>
                     </pre>
                 </div>
 
@@ -819,6 +855,593 @@
 </div>
 
 
+<!--****************************************    Tag    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">On & Off</span>
+            <span class="panel-heading-secondary">07</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+
+                <div class="col-span-6">
+                    <div class="tag tag-rounded tag-padded background-color-1 light-text">Pop</div>
+                    <div class="tag tag-padded background-color-1 light-text">Metal</div>
+                    <div class="tag tag-circle link-white-small background-color-1 light-text"></div>
+                    <div class="tag tag-rounded background-color-1 light-text">2</div>
+                    <div class="tag tag-callout light-text">26</div>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="tag tag-rounded tag-padded background-color-1 light-text">Pop</div>
+<div class="tag tag-padded background-color-1 light-text">Metal</div>
+<div class="tag tag-circle link-white-small background-color-1 light-text"></div>
+<div class="tag tag-rounded background-color-1 light-text">2</div>
+<div class="tag tag-callout light-text">26</div>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="tag-remove">Design</div>
+                    <div class="tag tag-rounded tag-padded background-color-1 light-text">12</div>
+                    <div class="tag-arrow-right"></div>
+                </div>
+
+                <div class="col-span-6">
+                    <pre data-language="html">
+<div class="tag-remove">Design</div>
+<div class="tag tag-rounded tag-padded background-color-1 light-text">12</div>
+<div class="tag-arrow-right"></div>
+                    </pre>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--****************************************    Typography    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">Typography</span>
+            <span class="panel-heading-secondary">09</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+
+                <div class="col-span-12">
+                    <div class="col-span-6">
+                        <h1>Heading One</h1>
+                        <h2>Heading Two</h2>
+                        <h3>Heading Three</h3>
+                        <h4>Heading Four</h4>
+                        <h5>Heading Five</h5>
+                    </div>
+                    <div class="col-span-6">
+                        <pre data-language="html">
+<h1>Heading One</h1>
+<h2>Heading Two</h2>
+<h3>Heading Three</h3>
+<h4>Heading Four</h4>
+<h5>Heading Five</h5>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="col-span-12">
+                    <div class="col-span-6">
+                        <h5 class="big">web developing</h5>
+                        <p>
+                            Interstate 80 Business (BL-80) isa business loop of Interstate 80.
+                        </p>
+                    </div>
+                    <div class="col-span-6">
+                    <pre data-language="html">
+<h5 class="big">web developing</h5>
+<p>
+    Interstate 80 Business (BL-80) isa business loop of Interstate 80.
+</p>
+                    </pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--****************************************    Listing    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">Listing</span>
+            <span class="panel-heading-secondary">010</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+                <div class="col-span-12">
+                    <div class="col-span-6">
+                        <ul class="listing">
+                            <li>Dribble.com</li>
+                            <li class="active">Behance</li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                        </ul>
+                    </div>
+                    <div class="col-span-6">
+                        <pre data-language="html">
+<ul class="listing">
+    <li>Dribble.com</li>
+    <li class="active">Behance</li>
+    <li>Facebook</li>
+    <li>Twitter</li>
+</ul>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="col-span-12">
+                    <div class="col-span-6">
+                        <ul class="listing listing-justified">
+                            <li>
+                                <div class="table-cell full-width">
+                                    Designmodo
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="tag">230</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table-cell full-width">
+                                    Design Legion
+                                </div>
+                                <div class="table-cell">
+                                    <div class="tag">115</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table-cell full-width">
+                                    CSS Liars
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="tag">234</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table-cell full-width">
+                                    Smashing Magazine
+                                </div>
+                                <div class="table-cell">
+                                    <div class="tag">35</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-6">
+                        <pre data-language="html">
+<ul class="listing listing-justified">
+    <li>
+        <div class="table-cell full-width">
+            Designmodo
+        </div>
+        <div class="table-cell full-width">
+            <div class="tag">230</div>
+        </div>
+    </li>
+    <li>
+        <div class="table-cell full-width">
+            Design Legion
+        </div>
+        <div class="table-cell">
+            <div class="tag">115</div>
+        </div>
+    </li>
+    <li>
+        <div class="table-cell full-width">
+            CSS Liars
+        </div>
+        <div class="table-cell full-width">
+            <div class="tag">234</div>
+        </div>
+    </li>
+    <li>
+        <div class="table-cell full-width">
+            Smashing Magazine
+        </div>
+        <div class="table-cell">
+            <div class="tag">35</div>
+        </div>
+    </li>
+</ul>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="col-span-6">
+                    <ul class="listing listing-justified">
+                        <li>
+                            <div class="table-cell full-width">
+                                Like a brilliant
+                                <div class="sub">She entered political</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="toggle toggle-dark toggle-on">
+                                    <div class="slider"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="table-cell full-width">
+                                Tune Up!
+                                <div class="sub">She entered political</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="toggle toggle-dark toggle-off">
+                                    <div class="slider"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<ul class="listing listing-justified">
+    <li>
+        <div class="table-cell full-width">
+            Like a brilliant
+            <div class="sub">She entered political</div>
+        </div>
+        <div class="table-cell">
+            <div class="toggle toggle-dark toggle-on">
+                <div class="slider"></div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="table-cell full-width">
+            Tune Up!
+            <div class="sub">She entered political</div>
+        </div>
+        <div class="table-cell">
+            <div class="toggle toggle-dark toggle-off">
+                <div class="slider"></div>
+            </div>
+        </div>
+    </li>
+</ul>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <ul class="listing">
+                        <li>
+                            <div class="table-cell">
+                                <div class="btn btn-small diamond background-color-6 circle"></div>
+                            </div>
+                            <div class="table-cell full-width listing-centered">
+                                Like a brilliant
+                                <div class="sub">She entered political</div>
+                            </div>
+                            <div class="table-cell listing-centered">
+                                <div class="arrow-right"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="table-cell">
+                                <div class="btn btn-small tuners background-color-7 circle"></div>
+                            </div>
+                            <div class="table-cell full-width listing-centered">
+                                Tune Up!
+                                <div class="sub">She entered political</div>
+                            </div>
+                            <div class="table-cell listing-centered">
+                                <div class="arrow-right"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<ul class="listing">
+    <li>
+        <div class="table-cell">
+            <div class="btn btn-small diamond background-color-6 circle"></div>
+        </div>
+        <div class="table-cell full-width listing-centered">
+            Like a brilliant
+            <div class="sub">She entered political</div>
+        </div>
+        <div class="table-cell listing-centered">
+            <div class="arrow-right"></div>
+        </div>
+    </li>
+    <li>
+        <div class="table-cell">
+            <div class="btn btn-small tuners background-color-7 circle"></div>
+        </div>
+        <div class="table-cell full-width listing-centered">
+            Tune Up!
+            <div class="sub">She entered political</div>
+        </div>
+        <div class="table-cell listing-centered">
+            <div class="arrow-right"></div>
+        </div>
+    </li>
+</ul>
+                    </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <ul class="listing">
+                        <li>
+                            <div class="table-cell full-width listing-centered">
+                                Like a brilliant
+                            </div>
+                            <div class="table-cell full-width listing-centered">
+                                <div class="tag tag-rounded tag-padded">12</div>
+                            </div>
+                            <div class="table-cell listing-centered">
+                                <div class="arrow-right"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="table-cell full-width listing-centered">
+                                Tune Up!
+                            </div>
+                            <div class="table-cell full-width listing-centered text-muted">
+                                Normal
+                            </div>
+                            <div class="table-cell listing-centered">
+                                <div class="arrow-right"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<ul class="listing">
+    <li>
+        <div class="table-cell full-width listing-centered">
+            Like a brilliant
+        </div>
+        <div class="table-cell full-width listing-centered">
+            <div class="tag tag-rounded tag-padded">12</div>
+        </div>
+        <div class="table-cell listing-centered">
+            <div class="arrow-right"></div>
+        </div>
+    </li>
+    <li>
+        <div class="table-cell full-width listing-centered">
+            Tune Up!
+        </div>
+        <div class="table-cell full-width listing-centered text-muted">
+            Normal
+        </div>
+        <div class="table-cell listing-centered">
+            <div class="arrow-right"></div>
+        </div>
+    </li>
+</ul>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--****************************************    Head    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">Head</span>
+            <span class="panel-heading-secondary">11</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+
+                <div class="col-span-6">
+                    <div class="block btn-group">
+                        <div class="table-cell">
+                            <button class="btn btn-small arrow-left-white-large"></button>
+                        </div>
+                        <div class="table-cell full-width">
+                            <button class="btn btn-large">FOLLOW US</button>
+                        </div>
+                        <div class="table-cell">
+                            <button class="btn btn-small three-white-bars"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                        <pre data-language="html">
+<div class="block btn-group">
+    <div class="table-cell">
+        <button class="btn btn-small arrow-left-white-large"></button>
+    </div>
+    <div class="table-cell full-width">
+        <button class="btn btn-large">FOLLOW US</button>
+    </div>
+    <div class="table-cell">
+        <button class="btn btn-small three-white-bars"></button>
+    </div>
+</div>
+                        </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="block btn-group">
+                        <div class="table-cell">
+                            <button class="btn btn-small arrow-left-white-large"></button>
+                        </div>
+                        <div class="table-cell full-width">
+                            <button class="btn btn-large">FOLLOW US</button>
+                        </div>
+                        <div class="table-cell">
+                            <button class="btn btn-small background-color-5 three-white-bars"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                        <pre data-language="html">
+<div class="block btn-group">
+    <div class="table-cell">
+        <button class="btn btn-small arrow-left-white-large"></button>
+    </div>
+    <div class="table-cell full-width">
+        <button class="btn btn-large">FOLLOW US</button>
+    </div>
+    <div class="table-cell">
+        <button class="btn btn-small background-color-5 three-white-bars"></button>
+    </div>
+</div>
+                        </pre>
+                </div>
+
+                <div class="col-span-6">
+                    <div class="block btn-group block">
+                        <div class="table-cell">
+                            <button class="btn btn-small reload-white-large"></button>
+                        </div>
+                        <div class="table-cell full-width">
+                            <button class="btn btn-large">Square Calendar</button>
+                        </div>
+                        <div class="table-cell">
+                            <button class="btn btn-small background-color-6 three-white-bars"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                        <pre data-language="html">
+<div class="block btn-group">
+    <div class="table-cell">
+        <button class="btn btn-small reload-white-large"></button>
+    </div>
+    <div class="table-cell full-width">
+        <button class="btn btn-large">Square Calendar</button>
+    </div>
+    <div class="table-cell">
+        <button class="btn btn-small background-color-6 three-white-bars"></button>
+    </div>
+</div>
+                        </pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--****************************************    Table    *********************************************************-->
+<div class="col-span-12">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-heading-primary">Table</span>
+            <span class="panel-heading-secondary">12</span>
+        </div>
+        <div class="panel-primary">
+            <div class="col-span-12">
+
+
+                <div class="col-span-6">
+                  <table class="table-dark">
+                      <tr>
+                          <td class="icon background-color-1 check-white"></td>
+                          <td class="icon background-color-8 star-outline"></td>
+                          <td>Dribble.com</td>
+                      </tr>
+                      <tr>
+                          <td class="icon check-transparent"></td>
+                          <td class="icon star-outline-transparent"></td>
+                          <td>Behance</td>
+                      </tr>
+                      <tr>
+                          <td class="icon check-transparent"></td>
+                          <td class="icon star-outline-transparent"></td>
+                          <td>Dehance</td>
+                      </tr>
+                      <tr>
+                          <td class="icon check-transparent"></td>
+                          <td class="icon star-outline-transparent"></td>
+                          <td>Twitter</td>
+                      </tr>
+                  </table>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<table class="table-dark">
+    <tr>
+        <td class="icon background-color-1 check-white"></td>
+        <td class="icon background-color-8 star-outline"></td>
+        <td>Dribble.com</td>
+    </tr>
+    <tr>
+        <td class="icon check-transparent"></td>
+        <td class="icon star-outline-transparent"></td>
+        <td>Behance</td>
+    </tr>
+    <tr>
+        <td class="icon check-transparent"></td>
+        <td class="icon star-outline-transparent"></td>
+        <td>Dehance</td>
+    </tr>
+    <tr>
+        <td class="icon check-transparent"></td>
+        <td class="icon star-outline-transparent"></td>
+        <td>Twitter</td>
+    </tr>
+</table>
+                    </pre>
+                </div>
+
+
+                <div class="col-span-6">
+                    <table class="table-dark">
+                        <tr>
+                            <td>Dribble.com</td>
+                        </tr>
+                        <tr class="background-color-1 light-text">
+                            <td>Behance</td>
+                        </tr>
+                        <tr>
+                            <td>Dehance</td>
+                        </tr>
+                        <tr>
+                            <td>Twitter</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-span-6">
+                    <pre data-language="html">
+<table class="table-dark">
+    <tr>
+        <td>Dribble.com</td>
+    </tr>
+    <tr class="background-color-1 light-text">
+        <td>Behance</td>
+    </tr>
+    <tr>
+        <td>Dehance</td>
+    </tr>
+    <tr>
+        <td>Twitter</td>
+    </tr>
+</table>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="http://localhost:35729/livereload.js"></script>
 </body>
