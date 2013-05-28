@@ -196,7 +196,6 @@ input[type="radio"] {
   padding: 0;
 }
 input[type="search"] {
-  -webkit-appearance: textfield;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -1338,8 +1337,10 @@ input[type="color"].input-small {
 }
 input,
 select,
-textarea {
+textarea,
+[type="search"] {
   width: 100%;
+  -webkit-appearance: none;
 }
 input[type="file"],
 input[type="image"],
@@ -1503,6 +1504,7 @@ textarea::-webkit-input-placeholder {
   background-image: url('../img/spritesheet-retina.png');
   background-size: 1000px 1000px;
   background-position: -130px -243px;
+  background-position: -150px -262px;
   background-color: #227c5b;
   border-color: #227c5b;
   outline: 1px solid #227c5b;
@@ -1964,16 +1966,19 @@ fieldset[disabled] .btn {
 }
 .btn-medium {
   padding: 50px;
+  max-height: 100px;
 }
 .btn-small {
   padding: 30px;
   font-size: 13.6px;
   border-radius: 0px;
+  max-height: 60px;
 }
 .btn-mini {
   padding: 21px;
   font-size: 12px;
   border-radius: 0px;
+  max-height: 42px;
 }
 .btn-block {
   display: block;
@@ -2616,7 +2621,7 @@ fieldset[disabled] .btn-link:focus {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: inherit;
   left: inherit;
   background-image: url('../img/spritesheet-retina.png');
   background-size: 1000px 1000px;
@@ -2624,6 +2629,7 @@ fieldset[disabled] .btn-link:focus {
   border-color: #f4f4f4;
   border-style: solid;
   border-width: 0 0 0 1px;
+  height: 60px;
   width: 60px;
 }
 .dropdown-toggle:hover:before {
@@ -4792,7 +4798,6 @@ a.list-group-item.active > .badge,
 .table-cell {
   display: table-cell;
   position: relative;
-  white-space: nowrap;
   vertical-align: top;
 }
 .full-width {

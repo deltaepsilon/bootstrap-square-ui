@@ -94,8 +94,10 @@ input[type="color"] {
 // Can't be on input[type=*] selectors or it's too specific
 input,
 select,
-textarea {
+textarea,
+[type="search"]{
   width: 100%;
+  -webkit-appearance: none;
 }
 
 // Reset width of input images, buttons, radios, checkboxes
@@ -278,6 +280,7 @@ textarea {
 
   input[type="checkbox"]:checked + label {
     .check-white;
+    background-position: -150px -262px;
     background-color: @green;
     border-color: @green;
     outline: 1px solid @green;
