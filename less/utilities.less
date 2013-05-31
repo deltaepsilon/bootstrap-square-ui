@@ -45,6 +45,7 @@
 // -------------------------
 
 .table-cell {
+  border-color: inherit;
   display: table-cell;
   vertical-align: top;
 }
@@ -96,8 +97,18 @@
   padding: 0 !important;
 }
 
+.no-border {
+  border-width: 0 !important;
+}
+
+.border-bottom {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+
 .mini-hr {
-  border-width: 2px;
+  border-width: 0;
+  height: 2px;
   max-width: 4em;
 }
 
@@ -108,4 +119,13 @@
     .dark-text;
     line-height: 24px;
   }
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

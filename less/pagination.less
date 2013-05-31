@@ -5,26 +5,29 @@
   display: inline-block;
   margin: @line-height-base 0;
   border-radius: @border-radius-base;
+
+  .btn-medium {
+    padding: 16px 30px;
+  }
 }
 .pagination > li {
+  border-width: 0 1px 0 0;
+  cursor: pointer;
   display: inline; // Remove list-style and block-level defaults
-}
-.pagination > li > a,
-.pagination > li > span {
   float: left; // Collapse white-space
-  padding: 4px 12px;
+  padding: 20px 30px;
   line-height: @line-height-base;
   text-decoration: none;
-  background-color: @pagination-bg;
-  border: 1px solid @pagination-border;
-  border-left-width: 0;
+
+  &:last-of-type {
+    border-width: 0;
+  }
+  
+  &.active {
+    cursor: default;
+  }
 }
-.pagination > li > a:hover,
-.pagination > li > a:focus,
-.pagination > .active > a,
-.pagination > .active > span {
-  background-color: @pagination-active-bg;
-}
+
 .pagination > .active > a,
 .pagination > .active > span {
   color: @grayLight;
@@ -46,6 +49,55 @@
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
   .border-right-radius(@border-radius-base);
+}
+
+.pagination-slider {
+  .no-select;
+
+  padding: 6px 0;
+
+  li {
+    border-right: 1px solid @black;
+    padding: 14px 18px;
+  }
+
+  .slider-left {
+    border-left: 4px solid @green1 !important;
+    cursor: col-resize !important;
+  }
+
+  .slider-right {
+    border-right: 4px solid @green1 !important;
+    cursor: col-resize !important;
+  }
+  
+  .active {
+    border-right: 1px solid @green2;
+    position: relative;
+    .light-text;
+
+    &:before {
+      .before();
+      .absLayout();
+      background-color: @green;
+      opacity: .4;
+    }
+
+    &:last-of-type {
+      .slider-right;
+    }
+  }
+}
+
+.pagination-text {
+  li {
+    border-style: solid;
+    border-width: 0 1px 0 0;
+
+    &:last-of-type {
+      border-width: 0;
+    }
+  }
 }
 
 

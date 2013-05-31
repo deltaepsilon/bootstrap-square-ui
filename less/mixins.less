@@ -577,47 +577,36 @@
 // --------------------------------------------------
 .background-color-000 {
   background-color: @black !important;
-  border-color: @black !important;
 }
 .background-color-00 {
   background-color: @gray6 !important;
-  border-color: @gray6 !important;
 }
 .background-color-0 {
   background-color: @white !important;
-  border-color: @white !important;
 }
 .background-color-1 {
   background-color: @green !important;
-  border-color: @green !important;
 }
 .background-color-2 {
   background-color: @blue0 !important;
-  border-color: @blue0 !important;
 }
 .background-color-3 {
   background-color: @salmon !important;
-  border-color: @salmon !important;
 }
 .background-color-4 {
   background-color: @purple0 !important;
-  border-color: @purple0 !important;
 }
 .background-color-5 {
   background-color: @purple1 !important;
-  border-color: @purple1 !important;
 }
 .background-color-6 {
   background-color: @blue1 !important;
-  border-color: @blue1 !important;
 }
 .background-color-7 {
   background-color: @green2 !important;
-  border-color: @green2 !important;
 }
 .background-color-8 {
   background-color: @orange !important;
-  border-color: @orange !important;
 }
 
 // Hovers
@@ -686,5 +675,50 @@
   &:hover, &.active, &.open {
     background-color: @orange !important;
     border-color: @orange !important;
+  }
+}
+
+// Highlights
+// --------------------------------------------------
+.highlight-color-0 {
+  background-color: @black;
+  border-color: @gray6;
+
+  &:hover, &.active, &.open {
+    background-color: @green;
+    border-color: @green1;
+    color: @white;
+  }
+}
+
+.highlight-color-1 {
+  background-color: @green;
+  border-color: @green1;
+  color: @white;
+
+  &:hover, &.active, &.open {
+    background-color: @black;
+    border-color: @gray6;
+    color: @white;
+  }
+}
+
+.highlight-color-5 {
+  background-color: @black;
+  border-color: @gray6;
+
+  &:hover, &.active, &.open {
+    background-color: @purple1;
+    border-color: @purple2;
+  }
+}
+
+.highlight-color-5-inverse {
+  background-color: @purple1;
+  border-color: @purple2;
+
+  &:hover, &.active, &.open {
+    background-color: @black;
+    border-color: @gray6;
   }
 }

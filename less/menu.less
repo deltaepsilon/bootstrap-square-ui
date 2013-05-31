@@ -1,11 +1,9 @@
 .menu {
-
-
   &.btn-group {
     font-family: @font-family-monospace;
 
     .btn {
-      border-bottom: 1px solid @gray6;
+      border-width: 0 0 1px 0;
     }
   }
 
@@ -54,20 +52,6 @@
   }
 }
 
-.menu-green {
-
-  .btn-group {
-    border-bottom: 1px solid @gray6;
-
-    &:hover {
-      .btn {
-        background-color: @green;
-        border-color: @green1;
-      }
-    }
-  }
-}
-
 @media (min-width: 767px) {
   .menu {
     .btn-large {
@@ -79,12 +63,8 @@
 
     &.btn-group {
       .btn {
-        border-right: 1px solid @gray6;
+        border-width: 0 1px 0 0;
       }
-    }
-
-    .dropdown-menu-right {
-      right: -1px;
     }
   }
 }
