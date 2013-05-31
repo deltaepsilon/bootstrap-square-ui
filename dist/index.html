@@ -16,7 +16,7 @@
 <div class="col-span-12 square-ui-header">
     <div class="square-ui-hexagon"></div>
     <h4 class="big">nice user interface for your site</h4>
-    <hr class="white mini"/>
+    <hr class="background-color-0 mini-hr"/>
     <h1 class="big" style="word-break: break-all">elements</h1>
 </div>
 
@@ -1503,7 +1503,8 @@
             <span class="panel-heading-secondary">02</span>
         </div>
         <div class="panel-primary">
-            <div class="col-span-6">
+            <div class="col-span-12">
+                <h1>Beware! This menu does not wrap for small screen sizes.</h1>
                 <div class="menu btn-group background-color-000">
                     <div class="table-cell">
                         <div class="btn btn-small gears"></div>
@@ -1521,54 +1522,433 @@
                         </div>
                     </div>
                     <div class="table-cell">
-                        <div class="btn btn-large borderless">
+                        <div class="btn btn-large borderless no-pad">
                             <div id="dlabel" class="menu-dropdown" data-toggle="dropdown">Options <span class="caret-down"></span></div>
-                            <ul id="dropdown-1" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dlabel">
+                            <ul id="dropdown-2" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dlabel">
                                 <li role="menuitem" data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
                                 <li role="menuitem" data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
                                 <li role="menuitem" data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
                             </ul>
-                            <script type="text/javascript">
-                                $('#dropdown-1').on('click', 'li', function(e) {
-                                    var target = $(e.target),
-                                            value = target.attr('data-value');
-                                    target.parents('.dropdown').find('.dropdown-toggle').text(value);
-                                });
-                            </script>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12">
+                <pre data-language="html">
+<div class="menu btn-group background-color-000">
+    <div class="table-cell">
+        <div class="btn btn-small gears"></div>
+    </div>
+    <div class="table-cell">
+        <div class="btn btn-large">Application</div>
+    </div>
+    <div class="table-cell">
+        <div class="btn btn-large background-color-000">Board</div>
+    </div>
+    <div class="table-cell full-width">
+        <div class="input-search-wrapper background-color-1">
+            <input class="input-search" type="search" value="Search">
+            <input class="input-search-submit" type="submit">
+        </div>
+    </div>
+    <div class="table-cell">
+        <div class="btn btn-large borderless no-pad">
+            <div id="dlabel" class="menu-dropdown" data-toggle="dropdown">Options <span class="caret-down"></span></div>
+            <ul id="dropdown-2" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dlabel">
+                <li role="menuitem" data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
+                <li role="menuitem" data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
+                <li role="menuitem" data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </pre>
+            </div>
+
+            <div class="col-span-12">
+                <h1>Beware! This menu requires a media query to resize.</h1>
+                <div class="menu btn-group background-color-000 full-width">
+                    <div class="btn btn-small gears background-color-hover-1"></div>
+                    <div class="btn btn-large">Application</div>
+                    <div class="btn btn-large">Board</div>
+                    <div class="btn btn-large">Developer</div>
+                    <div class="btn btn-large">Design</div>
+                    <div class="btn btn-large">Help</div>
+                    <div class="btn btn-large borderless no-pad pull-right">
+                        <div id="dlabel" class="menu-dropdown" data-toggle="dropdown">Options <span class="caret-down"></span></div>
+                        <ul id="dropdown-3" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dlabel">
+                            <li role="menuitem" data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
+                            <li role="menuitem" data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
+                            <li role="menuitem" data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12">
+                <pre data-language="html">
+<div class="menu btn-group background-color-000 full-width">
+    <div class="btn btn-small gears background-color-hover-1"></div>
+    <div class="btn btn-large">Application</div>
+    <div class="btn btn-large">Board</div>
+    <div class="btn btn-large">Developer</div>
+    <div class="btn btn-large">Design</div>
+    <div class="btn btn-large">Help</div>
+    <div class="btn btn-large borderless no-pad pull-right">
+        <div id="dlabel" class="menu-dropdown text-right" data-toggle="dropdown">Options <span class="caret-down"></span></div>
+        <ul id="dropdown-3" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dlabel">
+            <li role="menuitem" data-value="Send Message"><div class="dropdown-image eye-transparent"></div>Send Message</li>
+            <li role="menuitem" data-value="Settings"><div class="dropdown-image person-transparent"></div>Settings</li>
+            <li role="menuitem" data-value="Favorite"><div class="dropdown-image beaker-transparent"></div>Favorite</li>
+        </ul>
+    </div>
+</div>
+                </pre>
+            </div>
+
+            <div class="col-span-6">
+                <div class="menu btn-group background-color-000 full-width">
+                    <div class="table-cell">
+                        <div class="btn btn-small airplane-large"></div>
+                    </div>
+                    <div class="table-cell full-width">
+                        <div class="btn btn-large full-width">follow us</div>
+                    </div>
+                    <div class="table-cell">
+                        <div id="dlabel" data-toggle="dropdown" class="btn btn-small three-white-bars background-color-hover-5"></div>
+                        <ul id="dropdown-4" class="dropdown-menu dropdown-menu-full dropdown-menu-dark" role="menu" aria-labelledby="dlabel">
+                            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                                <div class="table-cell">
+                                    <div class="btn btn-small calendar"></div>
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="btn btn-large full-width">Dashboard</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="btn btn-small arrow-right"></div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small calendar table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small bubble-medium table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Messages</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small person-white table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Profile</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small gears table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Settings</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                                <div class="table-cell">
+                                    <div class="btn btn-small bubble-medium"></div>
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="btn btn-large full-width">Messages</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="btn btn-small arrow-right"></div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small calendar table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small bubble-medium table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Messages</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small person-white table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Profile</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small gears table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Settings</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                                <div class="table-cell">
+                                    <div class="btn btn-small person-white"></div>
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="btn btn-large full-width">Profile</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="btn btn-small arrow-right"></div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small calendar table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small bubble-medium table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Messages</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small person-white table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Profile</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small gears table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Settings</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                                <div class="table-cell">
+                                    <div class="btn btn-small gears"></div>
+                                </div>
+                                <div class="table-cell full-width">
+                                    <div class="btn btn-large full-width">Settings</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="btn btn-small arrow-right"></div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small calendar table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small bubble-medium table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Messages</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small person-white table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Profile</div>
+                                    </li>
+                                    <li class="btn-group no-pad">
+                                        <div class="btn btn-small gears table-cell"></div>
+                                        <div class="btn btn-large table-cell full-width">Settings</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-span-6">
+                <pre data-language="html">
+<div class="menu btn-group background-color-000 full-width">
+    <div class="table-cell">
+        <div class="btn btn-small airplane-large"></div>
+    </div>
+    <div class="table-cell full-width">
+        <div class="btn btn-large full-width">follow us</div>
+    </div>
+    <div class="table-cell">
+        <div id="dlabel" data-toggle="dropdown" class="btn btn-small three-white-bars background-color-hover-5"></div>
+        <ul id="dropdown-4" class="dropdown-menu dropdown-menu-full dropdown-menu-dark" role="menu" aria-labelledby="dlabel">
+            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                <div class="table-cell">
+                    <div class="btn btn-small calendar"></div>
+                </div>
+                <div class="table-cell full-width">
+                    <div class="btn btn-large full-width">Dashboard</div>
+                </div>
+                <div class="table-cell">
+                    <div class="btn btn-small arrow-right"></div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small calendar table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small bubble-medium table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Messages</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small person-white table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Profile</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small gears table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Settings</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                <div class="table-cell">
+                    <div class="btn btn-small bubble-medium"></div>
+                </div>
+                <div class="table-cell full-width">
+                    <div class="btn btn-large full-width">Messages</div>
+                </div>
+                <div class="table-cell">
+                    <div class="btn btn-small arrow-right"></div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small calendar table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small bubble-medium table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Messages</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small person-white table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Profile</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small gears table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Settings</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                <div class="table-cell">
+                    <div class="btn btn-small person-white"></div>
+                </div>
+                <div class="table-cell full-width">
+                    <div class="btn btn-large full-width">Profile</div>
+                </div>
+                <div class="table-cell">
+                    <div class="btn btn-small arrow-right"></div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small calendar table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small bubble-medium table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Messages</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small person-white table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Profile</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small gears table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Settings</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li role="menuitem" class="btn-group no-pad dropdown-submenu">
+                <div class="table-cell">
+                    <div class="btn btn-small gears"></div>
+                </div>
+                <div class="table-cell full-width">
+                    <div class="btn btn-large full-width">Settings</div>
+                </div>
+                <div class="table-cell">
+                    <div class="btn btn-small arrow-right"></div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small calendar table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Dashboard</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small bubble-medium table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Messages</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small person-white table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Profile</div>
+                    </li>
+                    <li class="btn-group no-pad">
+                        <div class="btn btn-small gears table-cell"></div>
+                        <div class="btn btn-large table-cell full-width">Settings</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+                </pre>
+            </div>
+
+            <div class="col-span-6">
+                <div class="menu menu-green background-color-000">
+                    <div class="btn-group">
+                        <div class="table-cell">
+                            <div class="btn btn-small gears"></div>
+                        </div>
+                        <div class="table-cell full-width">
+                            <div class="btn btn-large full-width text-left">Application Settings</div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="table-cell">
+                            <div class="btn btn-small bubble-medium"></div>
+                        </div>
+                        <div class="table-cell full-width">
+                            <div class="btn btn-large full-width text-left">Messages</div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="table-cell">
+                            <div class="btn btn-small person-white"></div>
+                        </div>
+                        <div class="table-cell full-width">
+                            <div class="btn btn-large full-width text-left">Profile</div>
+                        </div>
+                    </div>
+                    <div class="callout">
+                        <h4 class="light-text">Square UI Professional UI Kit for Designers</h4>
+                        <hr class="background-color-3 mini-hr">
+                        <p class="dark-text">
+                            She entered into a political marriage with Rainilaiarivony who, in his role as Prime Minister
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-span-6">
                 <pre data-language="html">
-
-                </pre>
-            </div>
-
-            <div class="col-span-6">
-
-            </div>
-            <div class="col-span-6">
-                <pre data-language="html">
-
-                </pre>
-            </div>
-
-            <div class="col-span-6">
-
-            </div>
-            <div class="col-span-6">
-                <pre data-language="html">
-
-                </pre>
-            </div>
-
-            <div class="col-span-6">
-
-            </div>
-            <div class="col-span-6">
-                <pre data-language="html">
-
+<div class="menu menu-green background-color-000">
+    <div class="btn-group">
+        <div class="table-cell">
+            <div class="btn btn-small gears"></div>
+        </div>
+        <div class="table-cell full-width">
+            <div class="btn btn-large full-width text-left">Application Settings</div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <div class="table-cell">
+            <div class="btn btn-small bubble-medium"></div>
+        </div>
+        <div class="table-cell full-width">
+            <div class="btn btn-large full-width text-left">Messages</div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <div class="table-cell">
+            <div class="btn btn-small person-white"></div>
+        </div>
+        <div class="table-cell full-width">
+            <div class="btn btn-large full-width text-left">Profile</div>
+        </div>
+    </div>
+    <div class="callout">
+        <h4 class="light-text">Square UI Professional UI Kit for Designers</h4>
+        <hr class="background-color-3 mini-hr">
+        <p class="dark-text">
+            She entered into a political marriage with Rainilaiarivony who, in his role as Prime Minister
+        </p>
+    </div>
+</div>
                 </pre>
             </div>
 

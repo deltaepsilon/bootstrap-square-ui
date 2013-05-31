@@ -46,12 +46,11 @@
 
 .table-cell {
   display: table-cell;
-  position: relative;
   vertical-align: top;
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .block {
@@ -60,6 +59,10 @@
 
 .light-text {
   color: @white;
+}
+
+.dark-text {
+  color: @gray3;
 }
 
 .abs-left {
@@ -87,4 +90,22 @@
 
 .borderless {
   border-width: 0 !important
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.mini-hr {
+  border-width: 2px;
+  max-width: 4em;
+}
+
+.callout {
+  padding: 40px;
+
+  p {
+    .dark-text;
+    line-height: 24px;
+  }
 }
