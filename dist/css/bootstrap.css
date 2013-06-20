@@ -1653,6 +1653,7 @@ input[type="number"]:focus {
 }
 .select-wrapper {
   display: block;
+  position: relative;
 }
 .select-wrapper:after {
   content: "";
@@ -1662,7 +1663,7 @@ input[type="number"]:focus {
   background-position: -18px -5px;
   position: absolute;
   top: 0;
-  right: 15px;
+  right: 0px;
   bottom: inherit;
   left: inherit;
   background-color: #ffffff;
@@ -1695,6 +1696,7 @@ select {
   -o-appearance: none;
 }
 select:focus {
+  border: 4px solid #227c5b;
   outline: none;
 }
 input[class*="span"],

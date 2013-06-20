@@ -348,11 +348,12 @@ input[type="number"] {
 // ----------------------
 .select-wrapper {
   display: block;
+  position: relative;
 
   &:after {
     .before;
     .triangles-up-down;
-    .absLayout(0, 15px, inherit, inherit);
+    .absLayout(0, 0px, inherit, inherit);
     background-color: @white;
     background-position: 8px 6px;
     border-left: 1px solid @gray0;
@@ -384,6 +385,7 @@ select {
   .appearance(none);
 
   &:focus {
+    border: 4px solid @green;
     outline: none;
   }
 }
