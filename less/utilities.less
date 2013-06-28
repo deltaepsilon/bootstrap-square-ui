@@ -133,3 +133,19 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+.ellipse-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipse-cell {
+  .ellipse-text;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.wrap-cell {
+  max-width: 0;
+  word-wrap: break-word;
+}
