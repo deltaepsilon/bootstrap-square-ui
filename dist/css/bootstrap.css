@@ -1299,14 +1299,16 @@ table th[class*="col-span-"] {
 .table-dark tr:last-of-type td {
   border-bottom: none;
 }
-.table-dark td {
+.table-dark td,
+.table-dark th {
   border-color: #232323;
   border-style: solid;
   border-width: 0 1px 1px 0;
   height: 60px;
   padding: 11px;
 }
-.table-dark td:last-of-type {
+.table-dark td:last-of-type,
+.table-dark th:last-of-type {
   border-width: 0 0 1px 0;
 }
 form {
