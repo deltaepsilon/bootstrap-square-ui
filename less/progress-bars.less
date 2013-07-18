@@ -45,6 +45,7 @@
 .progress {
   background: @gray1;
   overflow: hidden;
+  position: relative;
   text-align: center;
 }
 
@@ -55,16 +56,16 @@
   font-size: 20px;
   color: @white;
   text-align: center;
-  padding: 20px;
+  height: 100%;
   position: relative;
   .transition(width .6s ease);
 }
 
 .progress-bar-text {
   font-size: 20px;
-  padding: 20px;
+  margin-top: -10px;
   z-index: 1;
-  .absLayout();
+  .absLayout(50%, 0, 0, 0);
 }
 
 

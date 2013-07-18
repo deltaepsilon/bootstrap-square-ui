@@ -4622,6 +4622,7 @@ a.list-group-item.active > .badge,
 .progress {
   background: #d7d2cc;
   overflow: hidden;
+  position: relative;
   text-align: center;
 }
 .progress-bar {
@@ -4630,7 +4631,7 @@ a.list-group-item.active > .badge,
   font-size: 20px;
   color: #ffffff;
   text-align: center;
-  padding: 20px;
+  height: 100%;
   position: relative;
   -webkit-transition: width 0.6s ease;
   -moz-transition: width 0.6s ease;
@@ -4639,10 +4640,10 @@ a.list-group-item.active > .badge,
 }
 .progress-bar-text {
   font-size: 20px;
-  padding: 20px;
+  margin-top: -10px;
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -4960,6 +4961,9 @@ a.list-group-item.active > .badge,
 }
 .full-width {
   width: 100% !important;
+}
+.full-height {
+  height: 100% !important;
 }
 .block {
   display: block;
