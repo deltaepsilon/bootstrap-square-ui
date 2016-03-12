@@ -1,358 +1,385 @@
 ---
 layout: default
 title: Customize and download
+slug: customize
+lead: Customize Bootstrap's components, Less variables, and jQuery plugins to get your very own version.
 ---
 
-<div class="bs-docs-sidebar">
-  <h5 class="bs-docs-sidenav-heading">Customize and download</h5>
-  <ul class="nav bs-docs-sidenav">
-    <li><a href="#components">1. Choose components</a></li>
-    <li><a href="#plugins">2. Select jQuery plugins</a></li>
-    <li><a href="#variables">3. Customize variables</a></li>
-    <li><a href="#download">4. Download</a></li>
-  </ul>
+
+<!-- less.js isn't IE8-compatible and throws an exception during initialization, so our Blob compatibility check and error messaging code never get called in that case.
+  So we use a conditional comment instead to inform folks about the lack of IE8 support.
+-->
+<!--[if lt IE 9]>
+  <style>
+    .bs-customizer,
+    .bs-customizer-import,
+    .bs-docs-sidebar {
+      display: none;
+    }
+  </style>
+  <div class="alert alert-danger">
+    <strong>The Bootstrap Customizer does not support IE9 and below.</strong><br>
+    Please take a second to <a href="http://browsehappy.com/">upgrade to a more modern browser</a>.
+  </div>
+<![endif]-->
+
+<!-- Customizer form -->
+
+<div id="defaults-change-alert" class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Heads up!</strong> The default value for <code>@brand-primary</code> has changed in the latest release to improve contrast and accessibility. Please double check your compiled CSS when upgrading.
 </div>
 
-  <div class="container bs-docs-container">
+<div class="bs-docs-section bs-customizer-import">
+  <div id="import-drop-target" class="bs-dropzone">
+    <div class="import-header">
+      <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+    </div>
+    <p class="lead">Have an existing configuration? Upload your <code>config.json</code> to import it.</p>
+    <p>Drag and drop here, or <label id="import-manual-trigger" class="btn-link">manually upload<input type="file" id="import-file-select" class="hidden"></label>.</p>
+    <hr>
+    <p><strong>Don't have one?</strong> That's okay—just start customizing the fields below.</p>
+  </div>
+</div>
 
-        <!-- Customize form
-        ================================================== -->
-        <form>
-          <section class="download" id="components">
-            <div class="page-header">
-              <a class="btn btn-small pull-right toggle-all" href="#">Toggle all</a>
-              <h1>
-                1. Choose components
-              </h1>
-            </div>
-            <div class="row download-builder">
-              <div class="col-span-3">
-                <h3>Scaffolding</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="reset.less"> Normalize and reset</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="print.less"> Print</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="scaffolding.less"> Body type and links</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="grid.less"> Grid system</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="layouts.less"> Layouts</label>
-                <h3>Base CSS</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="type.less"> Headings, body, etc</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="code.less"> Code and pre</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="labels-badges.less"> Labels and badges</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="tables.less"> Tables</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="forms.less"> Forms</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="buttons.less"> Buttons</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="sprites.less"> Icons</label>
-              </div><!-- /span -->
-              <div class="col-span-3">
-                <h3>Components</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="button-groups.less"> Button groups and dropdowns</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="navs.less"> Navs, tabs, and pills</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="navbar.less"> Navbar</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="breadcrumbs.less"> Breadcrumbs</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="pagination.less"> Pagination</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="pager.less"> Pager</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="thumbnails.less"> Thumbnails</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="alerts.less"> Alerts</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="progress-bars.less"> Progress bars</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="hero-unit.less"> Hero unit</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="media.less"> Media component</label>
-                <h3>JS Components</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="tooltip.less"> Tooltips</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="popovers.less"> Popovers</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="modals.less"> Modals</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="dropdowns.less"> Dropdowns</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="accordion.less"> Collapse</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="carousel.less"> Carousel</label>
-              </div><!-- /span -->
-              <div class="col-span-3">
-                <h3>Miscellaneous</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="wells.less"> Wells</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="close.less"> Close icon</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> Utilities</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="component-animations.less"> Component animations</label>
-                <h3>Responsive</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-utilities.less"> Visible/hidden classes</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> Narrow tablets and below (<767px)</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> Tablets to desktops (767-979px)</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> Large desktops (>1200px)</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-navbar.less"> Responsive navbar</label>
-              </div><!-- /span -->
-            </div><!-- /row -->
-          </section>
+<form class="bs-customizer">
+  <div class="bs-docs-section" id="less-section">
+    <button class="btn btn-default toggle" type="button">Toggle all</button>
+    <h1 id="less" class="page-header">Less files</h1>
 
-          <section class="download" id="plugins">
-            <div class="page-header">
-              <a class="btn btn-small pull-right toggle-all" href="#">Toggle all</a>
-              <h1>
-                2. Select jQuery plugins
-              </h1>
-            </div>
-            <div class="row download-builder">
-              <div class="col-span-3">
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-transition.js">
-                  Transitions <small>(required for any animation)</small>
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-modal.js">
-                  Modals
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-dropdown.js">
-                  Dropdowns
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-scrollspy.js">
-                  Scrollspy
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-tab.js">
-                  Togglable tabs
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-tooltip.js">
-                  Tooltips
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-popover.js">
-                  Popovers <small>(requires Tooltips)</small>
-                </label>
-              </div><!-- /span -->
-              <div class="col-span-3">
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-affix.js">
-                  Affix
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-alert.js">
-                  Alert messages
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-button.js">
-                  Buttons
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-collapse.js">
-                  Collapse
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-carousel.js">
-                  Carousel
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" checked="true" value="bootstrap-typeahead.js">
-                  Typeahead
-                </label>
-              </div><!-- /span -->
-              <div class="col-span-3">
-                <h4 class="muted">Heads up!</h4>
-                <p class="muted">All checked plugins will be compiled into a single file, bootstrap.js. All plugins require the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> to be included.</p>
-              </div><!-- /span -->
-            </div><!-- /row -->
-          </section>
+    <p class="lead">Choose which Less files to compile into your custom build of Bootstrap. Not sure which files to use? Read through the <a href="../css/">CSS</a> and <a href="../components/">Components</a> pages in the docs.</p>
 
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">
+        <h3>Common CSS</h3>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="print.less">
+            Print media styles
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="type.less">
+            Typography
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="code.less">
+            Code
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="grid.less">
+            Grid system
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="tables.less">
+            Tables
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="forms.less" data-dependents="navbar.less,input-groups.less">
+            Forms
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="buttons.less" data-dependents="button-groups.less">
+            Buttons
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="responsive-utilities.less">
+            Responsive utilities
+          </label>
+        </div>
+      </div><!-- .col-xs-6 .col-sm-4 -->
 
-          <section class="download" id="variables">
-            <div class="page-header">
-              <a class="btn btn-small pull-right toggle-all" href="#">Reset to defaults</a>
-              <h1>
-                3. Customize variables
-              </h1>
-            </div>
-            <div class="row download-builder">
-              <div class="col-span-3">
-                <h3>Scaffolding</h3>
-                <label>@body-background</label>
-                <input type="text" placeholder="#fff">
-                <label>@text-color</label>
-                <input type="text" placeholder="@grayDark">
+      <div class="col-xs-6 col-sm-4">
+        <h3>Components</h3>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="glyphicons.less">
+            Glyphicons
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="button-groups.less" data-dependencies="buttons.less">
+            Button groups
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="input-groups.less" data-dependencies="forms.less">
+            Input groups
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="navs.less" data-dependents="navbar.less">
+            Navs
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="navbar.less" data-dependencies="forms.less,navs.less">
+            Navbar
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="breadcrumbs.less">
+            Breadcrumbs
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="pagination.less">
+            Pagination
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="pager.less">
+            Pager
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="labels.less">
+            Labels
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="badges.less">
+            Badges
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="jumbotron.less">
+            Jumbotron
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="thumbnails.less">
+            Thumbnails
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="alerts.less">
+            Alerts
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="progress-bars.less">
+            Progress bars
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="media.less">
+            Media items
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="list-group.less">
+            List groups
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="panels.less">
+            Panels
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="responsive-embed.less">
+            Responsive embed
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="wells.less">
+            Wells
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="close.less">
+            Close icon
+          </label>
+        </div>
+      </div><!-- .col-xs-6 .col-sm-4 -->
 
-                <h3>Links</h3>
-                <label>@link-color</label>
-                <input type="text" placeholder="#08c">
-                <label>@link-color-hover</label>
-                <input type="text" placeholder="darken(@link-color, 15%)">
+      <div class="col-xs-6 col-sm-4">
+        <h3>JavaScript components</h3>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="component-animations.less">
+            Component animations (for JS)<br>
+            (includes Collapse)
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="dropdowns.less">
+            Dropdown
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="tooltip.less">
+            Tooltip
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="popovers.less">
+            Popover
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="modals.less">
+            Modal
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="carousel.less">
+            Carousel
+          </label>
+        </div>
+      </div><!-- .col-xs-6 .col-sm-4 -->
+    </div><!-- /.row -->
+  </div>
 
-                <h3>Grid system</h3>
-                <label>@grid-columns</label>
-                <input type="text" placeholder="12">
-                <label>@grid-column-width</label>
-                <input type="text" placeholder="60px">
-                <label>@grid-gutter-width</label>
-                <input type="text" placeholder="20px">
-                <label>@grid-column-width-1200</label>
-                <input type="text" placeholder="70px">
-                <label>@grid-gutter-width-1200</label>
-                <input type="text" placeholder="30px">
-                <label>@grid-column-width-768</label>
-                <input type="text" placeholder="42px">
-                <label>@grid-gutter-width-768</label>
-                <input type="text" placeholder="20px">
+  <div class="bs-docs-section" id="plugin-section">
+    <button class="btn btn-default toggle" type="button">Toggle all</button>
+    <h1 id="plugins" class="page-header">jQuery plugins</h1>
 
-              </div><!-- /span -->
-              <div class="col-span-3">
+    <p class="lead">Choose which jQuery plugins should be included in your custom JavaScript files. Unsure what to include? Read the <a href="../javascript/">JavaScript</a> page in the docs.</p>
+    <div class="row">
+      <div class="col-lg-6">
+        <h4>Linked to components</h4>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="alert.js">
+            Alert dismissal
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="button.js">
+            Advanced buttons
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="carousel.js">
+            Carousel functionality
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="dropdown.js">
+            Dropdowns
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="modal.js">
+            Modals
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="tooltip.js">
+            Tooltips
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="popover.js" data-dependencies="tooltip.js">
+            Popovers <small>(requires Tooltips)</small>
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="tab.js">
+            Togglable tabs
+          </label>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h4>Magic</h4>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="affix.js">
+            Affix
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="collapse.js">
+            Collapse
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="scrollspy.js">
+            Scrollspy
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked value="transition.js">
+            Transitions <small>(required for any kind of animation)</small>
+          </label>
+        </div>
+      </div>
+    </div>
 
-                <h3>Typography</h3>
-                <label>@font-family-sans-serif</label>
-                <input type="text" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
-                <label>@font-family-serif</label>
-                <input type="text" placeholder="Georgia, 'Times New Roman', Times, serif">
-                <label>@font-family-monospace</label>
-                <input type="text" placeholder="Menlo, Monaco, 'Courier New', monospace">
+    <div class="bs-callout bs-callout-info">
+      <h4>Produces two files</h4>
+      <p>All checked plugins will be compiled into a readable <code>bootstrap.js</code> and a minified <code>bootstrap.min.js</code>. We recommend you use the minified version in production.</p>
+    </div>
 
-                <label>@font-size-base</label>
-                <input type="text" placeholder="14px">
-                <label>@font-family-base</label>
-                <input type="text" placeholder="@font-family-sans-serif">
-                <label>@line-height-base</label>
-                <input type="text" placeholder="20px">
+    <div class="bs-callout bs-callout-danger">
+      <h4>jQuery required</h4>
+      <p>All plugins require the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> to be included.</p>
+    </div>
+  </div>
 
-                <label>@headings-font-family</label>
-                <input type="text" placeholder="inherit">
-                <label>@headings-font-weight</label>
-                <input type="text" placeholder="bold">
-                <label>@headingsColor</label>
-                <input type="text" placeholder="inherit">
+  <div class="bs-docs-section" id="less-variables-section">
+    <button class="btn btn-default toggle" type="button">Reset to defaults</button>
+    <h1 id="less-variables" class="page-header">Less variables</h1>
 
-                <label>@font-size-large</label>
-                <input type="text" placeholder="@font-size-base * 1.25">
-                <label>@font-size-small</label>
-                <input type="text" placeholder="@font-size-base * 0.85">
-                <label>@font-size-mini</label>
-                <input type="text" placeholder="@font-size-base * 0.75">
+    <p class="lead">Customize Less variables to define colors, sizes and more inside your custom CSS stylesheets.</p>
+    {% include customizer-variables.html %}
+  </div>
 
-                <label>@padding-large</label>
-                <input type="text" placeholder="11px 19px">
-                <label>@padding-small</label>
-                <input type="text" placeholder="2px 10px">
-                <label>@padding-mini</label>
-                <input type="text" placeholder="1px 6px">
+  <div class="bs-docs-section">
+    <h1 id="download" class="page-header">Download</h1>
 
-                <label>@border-radius-base</label>
-                <input type="text" placeholder="4px">
-                <label>@border-radius-large</label>
-                <input type="text" placeholder="6px">
-                <label>@border-radius-small</label>
-                <input type="text" placeholder="3px">
-
-                <label>@hero-background</label>
-                <input type="text" placeholder="@grayLighter">
-                <label>@hero-heading-color</label>
-                <input type="text" placeholder="inherit">
-                <label>@hero-lead-color</label>
-                <input type="text" placeholder="inherit">
-
-                <h3>Tables</h3>
-                <label>@table-background</label>
-                <input type="text" placeholder="transparent">
-                <label>@table-background-accent</label>
-                <input type="text" placeholder="#f9f9f9">
-                <label>@table-background-hover</label>
-                <input type="text" placeholder="#f5f5f5">
-                <label>@table-border</label>
-                <input type="text" placeholder="#ddd">
-
-                <h3>Forms</h3>
-                <label>@input-color-placeholder</label>
-                <input type="text" placeholder="@grayLight">
-                <label>@input-background</label>
-                <input type="text" placeholder="#fff">
-                <label>@input-border</label>
-                <input type="text" placeholder="#ccc">
-                <label>@input-border-radius</label>
-                <input type="text" placeholder="3px">
-                <label>@input-background-disabled</label>
-                <input type="text" placeholder="@grayLighter">
-                <label>@form-actions-background</label>
-                <input type="text" placeholder="#f5f5f5">
-                <label>@btn-backround-primary</label>
-                <input type="text" placeholder="@link-color">
-                <label>@btn-backround-primary-highlight</label>
-                <input type="text" placeholder="darken(#fff, 10%)">
-
-              </div><!-- /span -->
-              <div class="col-span-3">
-
-                <h3>Form states &amp; alerts</h3>
-                <label>@state-warning-text</label>
-                <input type="text" placeholder="#c09853">
-                <label>@state-warning-background</label>
-                <input type="text" placeholder="#fcf8e3">
-                <label>@state-error-text</label>
-                <input type="text" placeholder="#b94a48">
-                <label>@state-error-background</label>
-                <input type="text" placeholder="#f2dede">
-                <label>@state-success-text</label>
-                <input type="text" placeholder="#468847">
-                <label>@state-success-background</label>
-                <input type="text" placeholder="#dff0d8">
-                <label>@state-info-text</label>
-                <input type="text" placeholder="#3a87ad">
-                <label>@state-info-background</label>
-                <input type="text" placeholder="#d9edf7">
-
-                <h3>Navbar</h3>
-                <label>@navbar-height</label>
-                <input type="text" placeholder="40px">
-                <label>@navbar-background</label>
-                <input type="text" placeholder="@grayDarker">
-                <label>@navbar-background-highlight</label>
-                <input type="text" placeholder="@grayDark">
-                <label>@navbar-text</label>
-                <input type="text" placeholder="@grayLight">
-                <label>@navbar-brand-color</label>
-                <input type="text" placeholder="@navbar-link-color">
-                <label>@navbar-link-color</label>
-                <input type="text" placeholder="@grayLight">
-                <label>@navbar-link-color-hover</label>
-                <input type="text" placeholder="#fff">
-                <label>@navbar-link-color-active</label>
-                <input type="text" placeholder="@navbar-link-color-hover">
-                <label>@navbar-link-background-hover</label>
-                <input type="text" placeholder="transparent">
-                <label>@navbar-link-background-active</label>
-                <input type="text" placeholder="@navbar-background">
-                <label>@navbarSearchBackground</label>
-                <input type="text" placeholder="lighten(@navbar-background, 25%)">
-                <label>@navbarSearchBackgroundFocus</label>
-                <input type="text" placeholder="#fff">
-                <label>@navbarSearchBorder</label>
-                <input type="text" placeholder="darken(@navbarSearchBackground, 30%)">
-                <label>@navbarSearchPlaceholderColor</label>
-                <input type="text" placeholder="#ccc">
-
-                <label>@navbar-collapse-width</label>
-                <input type="text" placeholder="979px">
-                <label>@navbar-collapse-width-desktop</label>
-                <input type="text" placeholder="@navbar-collapse-width + 1">
-
-                <h3>Dropdowns</h3>
-                <label>@dropdown-background</label>
-                <input type="text" placeholder="#fff">
-                <label>@dropdown-border</label>
-                <input type="text" placeholder="rgba(0,0,0,.2)">
-                <label>@dropdown-link-color</label>
-                <input type="text" placeholder="@grayDark">
-                <label>@dropdown-link-color-hover</label>
-                <input type="text" placeholder="#fff">
-                <label>@dropdown-link-background-hover</label>
-                <input type="text" placeholder="@link-color">
-              </div><!-- /span -->
-            </div><!-- /row -->
-          </section>
-
-          <section class="download" id="download">
-            <div class="page-header">
-              <h1>
-                4. Download
-              </h1>
-            </div>
-            <div class="download-btn">
-              <a class="btn btn-primary" href="#" onclick="_gaq.push(['_trackEvent', 'Customize', 'Download', 'Customize and Download']);">Customize and Download</a>
-              <h4>What's included?</h4>
-              <p>Downloads include compiled CSS, compiled and minified CSS, and compiled jQuery plugins, all nicely packed up into a zipball for your convenience.</p>
-            </div>
-          </section><!-- /download -->
-        </form>
-
-
-  </div><!-- /.container -->
+    <p class="lead">Hooray! Your custom version of Bootstrap is now ready to be compiled. Just click the button below to finish the process.</p>
+    <div class="bs-customize-download">
+      <button type="submit" id="btn-compile" disabled class="btn btn-block btn-lg btn-outline" onclick="ga('send', 'event', 'Customize', 'Download', 'Customize and Download');">Compile and Download</button>
+    </div>
+  </div><!-- /download -->
+</form>
